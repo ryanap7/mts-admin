@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root {
+    --primary: #0069b3;
+    --secondaryOrange: #de5d0c;
+    --secondaryBlue: #024a7b;
+}
+
+* {
+    margin: 0;
+    overflow-x: hidden;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.container-navbar5-mz5 {
+    padding: 44px 100px;
+    display: flex;
+    height: 60px;
+    width: 100vw;
+    position: fixed;
+    box-shadow: 10px 9px 52px 0px rgba(107, 107, 107, 0.342);
+    left: 0;
+    z-index: 444444444;
+    top: 0;
+    background-color: white;
+    justify-content: space-between;
+    overflow: hidden;
+    align-items: center;
+}
+
+.logo-navbar5-mz5 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: -30px;
+}
+
+.logo-navbar5-mz5 img {
+    width: 160px;
+    cursor: pointer;
+    position: absolute;
+    transition: 0.2s;
+}
+
+.logo-navbar5-mz5 img:hover {
+    transition: 0.2s;
+    transform: scale(0.97);
+}
+
+.content1-navbar5-mz5 li.active a {
+    color: var(--secondaryOrange);
+    background-color: white;
+    box-shadow: none;
+    text-shadow: none;
+    border: none;
+    outline: none;
+}
+
+.logo-navbar5-mz5 h1 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: -0.01em;
+    color: #000000;
+}
+
+.content-navbar5-mz5 {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.content1-navbar5-mz5 {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.content1-navbar5-mz5 li a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: #000000;
+}
+
+.content2-navbar5-mz5 {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.content2-navbar5-mz5 li {
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+.dropdown-mz5 {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content-mz5 {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 320px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    list-style-type: none;
+}
+
+.dropdown-content-mz5 li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown-content-mz5 li:hover {
+    background-color: var(--secondaryOrange);
+}
+
+.dropdown-mz5:hover .dropdown-content-mz5 {
+    display: block;
+}
+
+.btn-toggle {
+    display: none;
+}
+
+.sidebare {
+    display: none;
+}
+
+@media screen and (min-width: 1600px) and (max-width: 1930px) {
+    .logo-navbar5-mz5 img {
+        width: 215px;
+    }
+
+    .container-navbar5-mz5 {
+        padding: 44px 100px;
+        display: flex;
+        height: 96px;
+        width: 100vw;
+        position: fixed;
+        box-shadow: 10px 9px 52px 0px rgba(107, 107, 107, 0.342);
+        left: 0;
+        z-index: 444444444;
+        top: 0;
+        background-color: white;
+        justify-content: space-between;
+        overflow: hidden;
+        align-items: center;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 576px) {
+    .container-navbar5-mz5 {
+        padding: 20px 10px;
+        height: 65px;
+        justify-content: space-between;
+        align-items: start;
+    }
+
+    .content1-navbar5-mz5 li {
+        display: none;
+    }
+
+    .logo-navbar5-mz5 img {
+        width: 90px;
+        height: auto;
+        position: absolute;
+        left: 30px;
+    }
+
+    .btn-toggle {
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+        padding: 4px;
+        position: absolute;
+        right: 30px;
+        box-sizing: border-box;
+        border: 1px solid rgb(151, 151, 151);
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .btn-toggle > div {
+        width: 36px;
+        height: 5px;
+        background-color: black;
+        border-radius: 4px;
+        margin: 2.5px 0px;
+    }
+
+    .btn-toggle:active {
+        transition: 0.2s;
+        transform: scale(0.98);
+    }
+
+    .sidebare {
+        position: fixed;
+        left: -100%;
+        display: block;
+        transition: 0.5s;
+        top: 0;
+        height: 100vh;
+        width: 100vw;
+        padding: 50px 35px;
+        background-color: white;
+        z-index: 9999999999999;
+    }
+
+    .sidebare ul li {
+        margin-bottom: 40px;
+        list-style: none;
+    }
+
+    .sidebare a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .sidebare img {
+        width: 30px;
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        transition: 0.2s;
+    }
+
+    .sidebare img:active {
+        transition: 0.2s;
+        transform: scale(0.95);
+    }
+}
+
+@media screen and (min-width: 14in) {
+    .logo-navbar5-mz5 img {
+        width: 200px;
+        /* height: 200px; */
+        cursor: pointer;
+        position: absolute;
+        transition: 0.2s;
+    }
+
+    .container-navbar5-mz5 {
+        height: 75px;
+    }
+}
