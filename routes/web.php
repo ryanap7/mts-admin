@@ -3,9 +3,8 @@
 use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'index');
-Route::view('/analytics', 'analytics');
-Route::view('/finance', 'finance');
-Route::view('/crypto', 'crypto');
+
+Route::view('/apps/brand', 'apps.brand.index');
 
 Route::view('/apps/chat', 'apps.chat');
 Route::view('/apps/mailbox', 'apps.mailbox');
