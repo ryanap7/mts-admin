@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\StatisticController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 
@@ -23,6 +24,10 @@ Route::middleware('guest')->group(function () {
 // Admin Routes
 Route::prefix('admin')->middleware(['private'])->group(function () {
     Route::view('/dashboard', 'index')->name('dashboard');
+
+    // Statistics
+    Route::get('statistics', [StatisticController::class, 'index'])->name('statistics');
+    Route::patch('/statistics', [StatisticController::class, 'update'])->name('statistics.update');
 
     Route::view('/apps/brand', 'apps.brand.index');
 });
@@ -76,7 +81,6 @@ Route::view('/elements/treeview', 'elements.treeview');
 Route::view('/elements/typography', 'elements.typography');
 
 Route::view('/charts', 'charts');
-Route::view('/widgets', 'widgets');
 Route::view('/font-icons', 'font-icons');
 Route::view('/dragndrop', 'dragndrop');
 
