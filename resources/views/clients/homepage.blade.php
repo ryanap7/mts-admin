@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
         <!-- Facebook Meta Tags -->
-        <meta property="og:url" content="https://mandiri-technology-sejahtera.vercel.app/index.html">
+        <meta property="og:url" content="https://mandiri-technology-sejahtera.vercel.app/">
         <meta property="og:type" content="website">
         <meta property="og:title" content="Mandiri Technology Sejahtera">
         <meta property="og:description" content="A System Integrator company established in September 2007 specializes in the development of IT network infrastructure and security systems.">
@@ -17,7 +17,7 @@
         <!-- Twitter Meta Tags -->
         <meta name="twitter:card" content="summary_large_image">
         <meta property="twitter:domain" content="mandiri-technology-sejahtera.vercel.app">
-        <meta property="twitter:url" content="https://mandiri-technology-sejahtera.vercel.app/index.html">
+        <meta property="twitter:url" content="https://mandiri-technology-sejahtera.vercel.app/">
         <meta name="twitter:title" content="Mandiri Technology Sejahtera">
         <meta name="twitter:description" content="A System Integrator company established in September 2007 specializes in the development of IT network infrastructure and security systems.">
         <meta name="twitter:image" content="https://raw.githubusercontent.com/khoirulhudaa/MTS/main/assets/images/logoIcon.png">
@@ -203,7 +203,7 @@
                 </p>
                 <div class="wrap-foto-mou">
                     <div class="foto-mou">
-                            <a href="./detail-product.html">
+                            <a href="./detail-product">
                             <div class="skeleton-card">
                                 <div class="skeleton-image">Loading...</div>
                             </div>
@@ -215,7 +215,7 @@
                         </a>
                     </div>
                     <div class="foto-mou">
-                            <a href="./detail-product.html">
+                            <a href="./detail-product">
                             <div class="skeleton-card">
                                 <div class="skeleton-image">Loading...</div>
                             </div>
@@ -227,7 +227,7 @@
                         </a>
                     </div>
                     <div class="foto-mou">
-                            <a href="./detail-product.html">
+                            <a href="./detail-product">
                             <div class="skeleton-card">
                                 <div class="skeleton-image">Loading...</div>
                             </div>
@@ -239,7 +239,7 @@
                         </a>
                     </div>
                     <div class="foto-mou">
-                            <a href="./detail-product.html">
+                            <a href="./detail-product">
                             <div class="skeleton-card">
                                 <div class="skeleton-image">Loading...</div>
                             </div>
@@ -251,7 +251,7 @@
                         </a>
                     </div>
                     <div class="foto-mou">
-                            <a href="./detail-product.html">
+                            <a href="./detail-product">
                             <div class="skeleton-card">
                                 <div class="skeleton-image">Loading...</div>
                             </div>
@@ -263,7 +263,7 @@
                         </a>
                     </div>
                     <div class="foto-mou">
-                            <a href="./detail-product.html">
+                            <a href="./detail-product">
                             <div class="skeleton-card">
                                 <div class="skeleton-image">Loading...</div>
                             </div>
@@ -275,7 +275,7 @@
                         </a>
                     </div>
                     <div class="foto-mou">
-                            <a href="./detail-product.html">
+                            <a href="./detail-product">
                             <div class="skeleton-card">
                                 <div class="skeleton-image">Loading...</div>
                             </div>
@@ -287,7 +287,7 @@
                         </a>
                     </div>
                     <div class="foto-mou">
-                            <a href="./detail-product.html">
+                            <a href="./detail-product">
                             <div class="skeleton-card">
                                 <div class="skeleton-image">Loading...</div>
                             </div>
@@ -299,7 +299,7 @@
                         </a>
                     </div>
                 </div>
-                <a href="./brand.html">
+                <a href="./brand">
                     <button class="btn-form">Show More</button>
                 </a>
             </div>
@@ -715,8 +715,8 @@
 
             // Tambahkan event listener untuk mengarahkan ke halaman lain saat gambar diklik
             logoImage.addEventListener('click', function() {
-                // Mengarahkan ke halaman index.html
-                window.location.href = './index.html';
+                // Mengarahkan ke halaman homepage
+                window.location.href = './homepage';
             });
 
             const titleElement = document.querySelector(".title-hero-bmw");

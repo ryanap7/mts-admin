@@ -15,7 +15,7 @@
         <!-- Facebook Meta Tags -->
         <meta
             property="og:url"
-            content="https://mandiri-technology-sejahtera.vercel.app/index.html"
+            content="https://mandiri-technology-sejahtera.vercel.app/"
         />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Mandiri Technology Sejahtera" />
@@ -36,7 +36,7 @@
         />
         <meta
             property="twitter:url"
-            content="https://mandiri-technology-sejahtera.vercel.app/index.html"
+            content="https://mandiri-technology-sejahtera.vercel.app/"
         />
         <meta name="twitter:title" content="Mandiri Technology Sejahtera" />
         <meta
@@ -73,7 +73,7 @@
                 </div>
                 <ul>
                     <li>
-                        <a href="./index.html">HOMEPAGE</a>
+                        <a href="./homepage">HOMEPAGE</a>
                     </li>
                     <li>
                         <a href="#brands">BRANDS</a>
@@ -99,7 +99,7 @@
                 <div class="content-navbar5-mz5">
                     <ul class="content1-navbar5-mz5">
                         <li>
-                            <a href="./index.html">| HOMEPAGE |</a>
+                            <a href="./homepage">| HOMEPAGE |</a>
                         </li>
                         <li>
                             <a href="#brands">| BRANDS |</a>
@@ -147,7 +147,7 @@
                 <div class="bottom-exp">
                     <div class="wrap-bottom-exp">
                         <div class="card-exp">
-                            <a href="./category.html">
+                            <a href="./category">
                                 <div class="card-top-exp">
                                     <img
                                         src="./assets/images/nike2.png"
@@ -162,7 +162,7 @@
                             </a>
                         </div>
                         <div class="card-exp">
-                            <a href="./category.html">
+                            <a href="./category">
                                 <div class="card-top-exp">
                                     <img
                                         src="./assets/images/nike2.png"
@@ -177,7 +177,7 @@
                             </a>
                         </div>
                         <div class="card-exp">
-                            <a href="./category.html">
+                            <a href="./category">
                                 <div class="card-top-exp">
                                     <img
                                         src="./assets/images/nike2.png"
@@ -192,7 +192,7 @@
                             </a>
                         </div>
                         <div class="card-exp">
-                            <a href="./category.html">
+                            <a href="./category">
                                 <div class="card-top-exp">
                                     <img
                                         src="./assets/images/nike2.png"
@@ -207,7 +207,7 @@
                             </a>
                         </div>
                         <div class="card-exp">
-                            <a href="./category.html">
+                            <a href="./category">
                                 <div class="card-top-exp">
                                     <img
                                         src="./assets/images/nike2.png"
@@ -222,7 +222,7 @@
                             </a>
                         </div>
                         <div class="card-exp">
-                            <a href="./category.html">
+                            <a href="./category">
                                 <div class="card-top-exp">
                                     <img
                                         src="./assets/images/nike2.png"
@@ -237,7 +237,7 @@
                             </a>
                         </div>
                         <div class="card-exp">
-                            <a href="./category.html">
+                            <a href="./category">
                                 <div class="card-top-exp">
                                     <img
                                         src="./assets/images/nike2.png"
@@ -252,7 +252,7 @@
                             </a>
                         </div>
                         <div class="card-exp">
-                            <a href="./category.html">
+                            <a href="./category">
                                 <div class="card-top-exp">
                                     <img
                                         src="./assets/images/nike2.png"
@@ -391,8 +391,8 @@
 
             // Tambahkan event listener untuk mengarahkan ke halaman lain saat gambar diklik
             logoImage.addEventListener("click", function () {
-                // Mengarahkan ke halaman index.html
-                window.location.href = "./index.html";
+                // Mengarahkan ke halaman index
+                window.location.href = "./homepage";
             });
 
             const menuContainer = document.querySelector(".bottom-exp");

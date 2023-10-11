@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
         <!-- Facebook Meta Tags -->
-        <meta property="og:url" content="https://mandiri-technology-sejahtera.vercel.app/index.html">
+        <meta property="og:url" content="https://mandiri-technology-sejahtera.vercel.app/">
         <meta property="og:type" content="website">
         <meta property="og:title" content="Mandiri Technology Sejahtera">
         <meta property="og:description" content="A System Integrator company established in September 2007 specializes in the development of IT network infrastructure and security systems.">
@@ -17,7 +17,7 @@
         <!-- Twitter Meta Tags -->
         <meta name="twitter:card" content="summary_large_image">
         <meta property="twitter:domain" content="mandiri-technology-sejahtera.vercel.app">
-        <meta property="twitter:url" content="https://mandiri-technology-sejahtera.vercel.app/index.html">
+        <meta property="twitter:url" content="https://mandiri-technology-sejahtera.vercel.app/">
         <meta name="twitter:title" content="Mandiri Technology Sejahtera">
         <meta name="twitter:description" content="A System Integrator company established in September 2007 specializes in the development of IT network infrastructure and security systems.">
         <meta name="twitter:image" content="https://raw.githubusercontent.com/khoirulhudaa/MTS/main/assets/images/logoIcon.png">
@@ -39,10 +39,10 @@
                 </div>
                 <ul>
                     <li>
-                        <a href="./index.html">HOMEPAGE</a>
+                        <a href="./homepage">HOMEPAGE</a>
                     </li>
                     <li>
-                        <a href="./products.html">PRODUCTS</a>
+                        <a href="./products">PRODUCTS</a>
                     </li>
                     <li>
                         <a href="#detail">LIST DETAIL</a>
@@ -68,10 +68,10 @@
                 <div class="content-navbar5-mz5">
                     <ul class="content1-navbar5-mz5">
                         <li>
-                            <a href="./index.html">| HOMEPAGE |</a>
+                            <a href="./homepage">| HOMEPAGE |</a>
                         </li>
                         <li>
-                            <a href="./products.html">| PRODUCTS |</a>
+                            <a href="./products">| PRODUCTS |</a>
                         </li>
                         <li>
                             <a href="#detail">| LIST DETAIL |</a>
@@ -84,19 +84,19 @@
             <img loading="lazy" src="./assets/images/square.svg" alt="square" class="square">
 
             <div class="info-detail">
-                <a href="./index.html">
+                <a href="./homepage">
                     <p>HOMEPAGE</p>
                 </a>
                 /
-                <a href="./brand.html">
+                <a href="./brand">
                     <p>BRANDS</p>
                 </a>
                 /
-                <a href="./category.html">
+                <a href="./category">
                     <p>CATEGORIES</p>
                 </a>
                 /
-                <a href="./products.html">
+                <a href="./products">
                     <p>PRODUCTS</p>
                 </a>
                 /
@@ -245,8 +245,8 @@
 
             // Tambahkan event listener untuk mengarahkan ke halaman lain saat gambar diklik
             logoImage.addEventListener('click', function() {
-                // Mengarahkan ke halaman index.html
-                window.location.href = './index.html';
+                // Mengarahkan ke halaman index
+                window.location.href = './homepage';
             });
 
             const menuContainer = document.querySelector(".bottom-exp");

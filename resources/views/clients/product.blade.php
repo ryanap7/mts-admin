@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
         <!-- Facebook Meta Tags -->
-        <meta property="og:url" content="https://mandiri-technology-sejahtera.vercel.app/index.html">
+        <meta property="og:url" content="https://mandiri-technology-sejahtera.vercel.app/">
         <meta property="og:type" content="website">
         <meta property="og:title" content="Mandiri Technology Sejahtera">
         <meta property="og:description" content="A System Integrator company established in September 2007 specializes in the development of IT network infrastructure and security systems.">
@@ -17,7 +17,7 @@
         <!-- Twitter Meta Tags -->
         <meta name="twitter:card" content="summary_large_image">
         <meta property="twitter:domain" content="mandiri-technology-sejahtera.vercel.app">
-        <meta property="twitter:url" content="https://mandiri-technology-sejahtera.vercel.app/index.html">
+        <meta property="twitter:url" content="https://mandiri-technology-sejahtera.vercel.app/">
         <meta name="twitter:title" content="Mandiri Technology Sejahtera">
         <meta name="twitter:description" content="A System Integrator company established in September 2007 specializes in the development of IT network infrastructure and security systems.">
         <meta name="twitter:image" content="https://raw.githubusercontent.com/khoirulhudaa/MTS/main/assets/images/logoIcon.png">
@@ -39,10 +39,10 @@
                 </div>
                 <ul>
                     <li>
-                        <a href="./index.html">HOMEPAGE</a>
+                        <a href="./homepage">HOMEPAGE</a>
                     </li>
                     <li>
-                        <a href="./category.html">CATEGORIES</a>
+                        <a href="./category">CATEGORIES</a>
                     </li>
                     <li>
                         <a href="#list-product">LIST PRODUCTS</a>
@@ -67,10 +67,10 @@
                 <div class="content-navbar5-mz5">
                     <ul class="content1-navbar5-mz5">
                         <li>
-                            <a href="./index.html">| HOMEPAGE |</a>
+                            <a href="./homepage">| HOMEPAGE |</a>
                         </li>
                         <li>
-                            <a href="./category.html">| CATEGORIES |</a>
+                            <a href="./category">| CATEGORIES |</a>
                         </li>
                         <li>
                             <a href="#list-product">| LIST PRODUCTS |</a>
@@ -110,7 +110,7 @@
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum deleniti, dolore 
                                 voluptatum assumenda a, nisi, fugit numquam quidem quisquam distinctio!
                             </p>
-                            <a href="./detail-product.html">
+                            <a href="./detail-product">
                                 <button class="btn-product">View Detail</button>
                             </a>
                         </div>
@@ -127,7 +127,7 @@
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum deleniti, dolore 
                                 voluptatum assumenda a, nisi, fugit numquam quidem quisquam distinctio!
                             </p>
-                            <a href="./detail-product.html">
+                            <a href="./detail-product">
                                 <button class="btn-product">View Detail</button>
                             </a>
                         </div>
@@ -144,7 +144,7 @@
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum deleniti, dolore 
                                 voluptatum assumenda a, nisi, fugit numquam quidem quisquam distinctio!
                             </p>
-                            <a href="./detail-product.html">
+                            <a href="./detail-product">
                                 <button class="btn-product">View Detail</button>
                             </a>
                         </div>
@@ -161,7 +161,7 @@
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum deleniti, dolore 
                                 voluptatum assumenda a, nisi, fugit numquam quidem quisquam distinctio!
                             </p>
-                            <a href="./detail-product.html">
+                            <a href="./detail-product">
                                 <button class="btn-product">View Detail</button>
                             </a>
                         </div>
@@ -222,8 +222,8 @@
 
             // Tambahkan event listener untuk mengarahkan ke halaman lain saat gambar diklik
             logoImage.addEventListener('click', function() {
-                // Mengarahkan ke halaman index.html
-                window.location.href = './index.html';
+                // Mengarahkan ke halaman index
+                window.location.href = './homepage';
             });
 
             const menuContainer = document.querySelector(".bottom-exp");
