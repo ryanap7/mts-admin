@@ -58,6 +58,12 @@ Route::view('/widgets', 'widgets');
 Route::view('/font-icons', 'font-icons');
 Route::view('/dragndrop', 'dragndrop');
 
+Route::view('/homepage', 'clients.homepage');
+Route::view('/brand', 'clients.brand');
+Route::view('/category', 'clients.category');
+Route::view('/products', 'clients.product');
+Route::view('/detail-product', 'clients.detail-product');
+
 Route::view('/tables', 'tables');
 
 Route::view('/datatables/advanced', 'datatables.advanced');

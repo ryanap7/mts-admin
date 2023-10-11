@@ -85,7 +85,7 @@
                     </a>
                 </li>
                 <li class="menu nav-item">
-                    <a href="/charts" class="nav-link group">
+                    <a href="/widgets" class="nav-link group">
                         <div class="flex items-center">
 
                             <svg class="group-hover:!text-primary" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -97,7 +97,7 @@
                     </a>
                 </li>
                 <li class="menu nav-item">
-                    <a href="/charts" class="nav-link group">
+                    <a href="/dragndrop" class="nav-link group">
                         <div class="flex items-center">
 
                             <svg class="group-hover:!text-primary" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
