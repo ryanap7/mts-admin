@@ -1,10 +1,32 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\LoginController;
 
-Route::view('/', 'index');
 
-Route::view('/apps/brand', 'apps.brand.index');
+// Public
+Route::view('/', 'clients.homepage');
+Route::view('/brand', 'clients.brand');
+Route::view('/category', 'clients.category');
+Route::view('/products', 'clients.product');
+Route::view('/detail-product', 'clients.detail-product');
+
+// Auth
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+
+Route::middleware('guest')->group(function () {
+    Route::get('auth', [LoginController::class, 'index'])->name('auth');
+    Route::post('auth', [LoginController::class, 'login'])->name('login.submit');
+});
+
+
+// Admin Routes
+Route::prefix('admin')->middleware(['private'])->group(function () {
+    Route::view('/dashboard', 'index')->name('dashboard');
+
+    Route::view('/apps/brand', 'apps.brand.index');
+});
+
 
 Route::view('/apps/chat', 'apps.chat');
 Route::view('/apps/mailbox', 'apps.mailbox');
@@ -58,12 +80,6 @@ Route::view('/widgets', 'widgets');
 Route::view('/font-icons', 'font-icons');
 Route::view('/dragndrop', 'dragndrop');
 
-Route::view('/homepage', 'clients.homepage');
-Route::view('/brand', 'clients.brand');
-Route::view('/category', 'clients.category');
-Route::view('/products', 'clients.product');
-Route::view('/detail-product', 'clients.detail-product');
-
 Route::view('/tables', 'tables');
 
 Route::view('/datatables/advanced', 'datatables.advanced');
@@ -107,12 +123,3 @@ Route::view('/pages/error404', 'pages.error404');
 Route::view('/pages/error500', 'pages.error500');
 Route::view('/pages/error503', 'pages.error503');
 Route::view('/pages/maintenence', 'pages.maintenence');
-
-Route::view('/auth/boxed-lockscreen', 'auth.boxed-lockscreen');
-Route::view('/auth/boxed-signin', 'auth.boxed-signin');
-Route::view('/auth/boxed-signup', 'auth.boxed-signup');
-Route::view('/auth/boxed-password-reset', 'auth.boxed-password-reset');
-Route::view('/auth/cover-login', 'auth.cover-login');
-Route::view('/auth/cover-register', 'auth.cover-register');
-Route::view('/auth/cover-lockscreen', 'auth.cover-lockscreen');
-Route::view('/auth/cover-password-reset', 'auth.cover-password-reset');
