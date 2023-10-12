@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\BrandController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\StatisticController;
 use Illuminate\Support\Facades\Route;
@@ -26,6 +27,9 @@ Route::middleware('guest')->group(function () {
 Route::prefix('admin')->middleware(['private'])->group(function () {
     Route::view('/dashboard', 'index')->name('dashboard');
 
+    // Brands
+    Route::get('/brands', [BrandController::class, 'index'])->name('brands.index');
+
     // Statistics
     Route::get('statistics', [StatisticController::class, 'index'])->name('statistics');
     Route::patch('/statistics', [StatisticController::class, 'update'])->name('statistics.update');
@@ -33,8 +37,6 @@ Route::prefix('admin')->middleware(['private'])->group(function () {
     // Contacts
     Route::get('contacts', [ContactController::class, 'index'])->name('contacts');
     Route::patch('/contacts', [ContactController::class, 'update'])->name('contacts.update');
-
-    Route::view('/apps/brand', 'apps.brand.index');
 });
 
 

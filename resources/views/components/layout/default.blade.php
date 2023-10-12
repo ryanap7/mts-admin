@@ -78,16 +78,17 @@
 
     <x-common.theme-customiser />
 
-    <div class="main-container text-black dark:text-white-dark min-h-screen" :class="[$store.app.navbar]">
-
+    <div class="main-container text-black dark:text-white-dark min-h-screen relative" :class="[$store.app.navbar]">
         <x-common.sidebar />
 
         <div class="main-content">
             <x-common.header />
 
-            <div class="p-6 animate__animated" :class="[$store.app.animation]">
+            <div class="p-6 animate__animated min-h-[90vh]" :class="[$store.app.animation]">
                 {{ $slot }}
 
+            </div>
+            <div class="p-6 absolute bottom-7 left-[260px] right-0">
                 <x-common.footer />
             </div>
         </div>

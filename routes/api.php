@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\API\BrandController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::apiResource('/brands', BrandController::class);
+
+// Route::get('/brands', [BrandController::class, 'index']);
+// Route::get('/brands/{id}', [BrandController::class, 'edit']);
+// Route::put('/brands/{id}', [BrandController::class, 'update']);
+// Route::delete('/brands/{id}', [BrandController::class, 'destroy']);
