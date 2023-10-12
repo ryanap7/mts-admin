@@ -14,7 +14,7 @@
                     </svg>
                 </a>
             </div>
-            <div x-data="header" class="sm:flex-1 ltr:sm:ml-0 ltr:ml-auto sm:rtl:mr-0 rtl:mr-auto flex items-center space-x-1.5 lg:space-x-2 rtl:space-x-reverse dark:text-[#d0d2d6]">
+            <div class="sm:flex-1 ltr:sm:ml-0 ltr:ml-auto sm:rtl:mr-0 rtl:mr-auto flex items-center space-x-1.5 lg:space-x-2 rtl:space-x-reverse dark:text-[#d0d2d6]">
                 <div class="sm:ltr:ml-auto sm:rtl:mr-auto" />
                 <div class=" dropdown flex-shrink-0" x-data="dropdown" @click.outside="open = false">
                     <a href="javascript:;" class="relative group" @click="toggle()">
