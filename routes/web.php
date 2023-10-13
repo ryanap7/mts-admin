@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\BrandController;
+use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\StatisticController;
 use Illuminate\Support\Facades\Route;
@@ -29,6 +30,9 @@ Route::prefix('admin')->middleware(['private'])->group(function () {
 
     // Brands
     Route::get('/brands', [BrandController::class, 'index'])->name('brands.index');
+
+    // Categories
+    Route::get('/categories', CategoryController::class)->name('categories.index');
 
     // Statistics
     Route::get('statistics', [StatisticController::class, 'index'])->name('statistics');
