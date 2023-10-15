@@ -23,7 +23,7 @@
         <meta name="twitter:image" content="https://raw.githubusercontent.com/khoirulhudaa/MTS/main/assets/images/logoIcon.png">
 
         <!-- Meta Tags Generated via https://www.opengraph.xyz -->
-        <link rel="icon" href="./assets/favicon/favicon.ico" type="image/x-icon"> 
+        <link rel="icon" href="{{ asset('/assets/favicon/favicon.ico') }}" type="image/x-icon"> 
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         @vite(['resources/css/navbar.css'])
@@ -35,14 +35,14 @@
         <div class="template">
             <div class="sidebare">
                 <div class="btn-close">
-                    <img src="./assets/icons/close.svg" alt="icon" id="btn-close">
+                    <img src="{{ asset('assets/icons/close.svg') }}" alt="icon" id="btn-close">
                 </div>
                 <ul>
                     <li>
-                        <a href="./homepage">HOMEPAGE</a>
+                        <a href="{{ route('homepage') }}">HOMEPAGE</a>
                     </li>
                     <li>
-                        <a href="./products">PRODUCTS</a>
+                        <a href="{{ route('products.index') }}">PRODUCTS</a>
                     </li>
                     <li>
                         <a href="#detail">LIST DETAIL</a>
@@ -55,7 +55,7 @@
                 <div class="logo-navbar5-mz5">
                     <img
                         loading="lazy"
-                        src="./assets/images/logoMTS.png"
+                        src="{{ asset('/assets/images/logoMTS.png') }}"
                         alt="logo"
                         id="logo"
                     />
@@ -68,10 +68,10 @@
                 <div class="content-navbar5-mz5">
                     <ul class="content1-navbar5-mz5">
                         <li>
-                            <a href="./homepage">| HOMEPAGE |</a>
+                            <a href="{{ route('homepage') }}">| HOMEPAGE |</a>
                         </li>
                         <li>
-                            <a href="./products">| PRODUCTS |</a>
+                            <a href="{{ route('products.index') }}">| PRODUCTS |</a>
                         </li>
                         <li>
                             <a href="#detail">| LIST DETAIL |</a>
@@ -81,22 +81,22 @@
                 </div>
             </div>
 
-            <img loading="lazy" src="./assets/images/square.svg" alt="square" class="square">
+            <img loading="lazy" src="{{ asset('/assets/images/square.svg') }}" alt="square" class="square">
 
             <div class="info-detail">
-                <a href="./homepage">
+                <a href="{{ route('homepage') }}">
                     <p>HOMEPAGE</p>
                 </a>
                 /
-                <a href="./brand">
+                <a href="{{ route('brands') }}">
                     <p>BRANDS</p>
                 </a>
                 /
-                <a href="./category">
+                <a href="{{ route('categories') }}">
                     <p>CATEGORIES</p>
                 </a>
                 /
-                <a href="./products">
+                <a href="{{ route('products.index') }}">
                     <p>PRODUCTS</p>
                 </a>
                 /
@@ -105,29 +105,28 @@
             <div class="wrapper-detail-product">
                 <div class="child-detail-product">
                     <div class="child-detail-product-left">
-                        <img loading="lazy" src="./assets/images/example.jpeg" alt="image-product">
+                        <img loading="lazy" src="{{ asset('/storage/' . $product->image) }}" alt="image-product">
                     </div>
                     <div class="child-detail-product-right">
                         <h4>Detail Product</h3>
-                        <h1>Canon Camera EOS</h1>
-                        <small>CANON</small>
+                        <h1>{{ $product->name }}</h1>
+                        <small>{{ $product->brand->name ?? '' }}</small>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum deleniti, dolore 
-                            voluptatum assumenda a, nisi, fugit numquam quidem quisquam distinctio!
+                            {{ $product->explanation }}
                         </p>
                         <div class="prize">
-                            $120
+                            {{ $product->price }}
                         </div>
                         <ul>
-                            <li>Size Products: Small</li>
-                            <li>Total stock: 120Pcs</li>
-                            <li>Condition product: New</li>
+                            <li>Size Products: {{ $product->size }}</li>
+                            <li>Total stock: {{ $product->stock }}</li>
+                            <li>Condition product: {{ $product->condition }}</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <img loading="lazy" src="./assets/images/square.svg" alt="square" class="square">
+            <img loading="lazy" src="{{ asset('/assets/images/square.svg') }}" alt="square" class="square">
 
             <div class="section-tabs" id="detail">
                 <div class="tabs">
@@ -139,85 +138,46 @@
                 </div>
                 <div class="tab-content">
                     <div class="tab-item active">
-                        <h2>CANON CANNON EOS ?</h2>
                         <p>
-                            Canon cameras are among the leading camera brands in the world, 
-                            known for their innovation and high quality. Canon cameras have become the top choice 
-                            for both amateur and professional photographers worldwide.
-                            <br />
-                            <br />
-                            Canon cameras are photographic devices designed to capture images and record videos with 
-                            exceptional quality. They offer various features and specifications that allow 
-                            users to take outstanding photos and videos. Canon cameras are also known for their 
-                            elegant design and ergonomic build, making them comfortable to use in various shooting 
-                            situations.
-                            <br />
-                            <br />
+                            {!! $product->description !!}
                         </p>
                     </div>
                     <div class="tab-item">
-                        <h2>SEPESIFICATIO CAMERA</h2>
                         <p>
-                            Canon is a globally recognized brand in the field of imaging and photography. 
-                            Known for its rich history and commitment to innovation, Canon has established 
-                            itself as a leading player in the industry.
-                            <br />
-                            <br />
-                            The Canon brand has its roots dating back to the early 1930s when it was founded in Japan.
-                            Over the decades, Canon has consistently delivered high-quality imaging products, 
-                            ranging from cameras and camcorders to printers and scanners. Its dedication to research 
-                            and development has resulted in groundbreaking technologies that have reshaped the imaging
-                            industry.
-                            <br />
-                            <br />
+                            {!! $product->spesification !!}
                         </p>
                     </div>
                     <div class="tab-item">
-                        <h2>Cannon</h2>
-                        <p>
-                            Canon is a globally recognized brand in the field of imaging and photography. 
-                            Known for its rich history and commitment to innovation, Canon has established 
-                            itself as a leading player in the industry.
-                            <br />
-                            <br />
-                            The Canon brand has its roots dating back to the early 1930s when it was founded in Japan.
-                            Over the decades, Canon has consistently delivered high-quality imaging products, 
-                            ranging from cameras and camcorders to printers and scanners. Its dedication to research 
-                            and development has resulted in groundbreaking technologies that have reshaped the imaging
-                            industry.
-                            <br />
-                            <br />
-                        </p>
+                        {!! $product->brand->description ?? '' !!}
                     </div>
                 </div>
             </div>
 
-            <div class="footer-hdm" id="footer">
+            <div class="footer-hdm">
                 <div class="footer-right-hdm">
                     <div class="group-list-hdm">
                         <ul>
                             <h3>PHONE</h3>
-                            <a href="https://wa.me/6285881308687" target="_blank">
-                                <li><img loading="lazy" src="./assets/icons/phone.svg" alt="icon" /> +6285881308687</li>
+                            <a href="https://wa.me/{{ $contact->phone }}" target="_blank">
+                                <li><img loading="lazy" src="{{ asset('/') }}assets/icons/phone.svg" alt="icon" /> {{ $contact->phone }}</li>
                             </a>
                         </ul>
                     </div>
                     <div class="group-list-hdm">
                         <ul>
                             <h3>EMAIL</h3>
-                            <a href="mailto:sales@mandiri-technology-sejahtera.com" target="__blank">
-                                <li><img loading="lazy" src="./assets/icons/email.svg" alt="icon" /> sales@mandiri-technology-sejahtera.com</li>
+                            <a href="mailto:{{ $contact->email }}" target="__blank">
+                                <li><img loading="lazy" src="{{ asset('/') }}assets/icons/email.svg" alt="icon" /> {{ $contact->email }}</li>
                             </a>
                         </ul>
                     </div>
                     <div class="group-list-hdm">
                         <ul>
                             <h3>ADDRESS</h3>
-                            <a href="https://maps.app.goo.gl/iBKCUC3FyFci5jR17" target="__blank">
+                            <a href="{{ $contact->google_map_link }}" target="__blank">
                                 <li>
-                                    <img loading="lazy" src="./assets/icons/location.svg" alt="icon" />
-                                    JL Tanjung Duren Raya No.4 Kav 373
-                                    Jakarta – Barat 11470
+                                    <img loading="lazy" src="{{ asset('/') }}assets/icons/location.svg" alt="icon" />
+                                    {{ $contact->address }}
                                 </li>
                             </a>
                         </ul>
@@ -230,15 +190,15 @@
 
             <a href="https://wa.me/6285881308687" target="_blank">
                 <div class="wa-feature">
-                    <img src="./assets/images/wa.png" alt="wa">
+                    <img src="{{ asset('/') }}assets/images/wa.png" alt="wa">
                 </div>
             </a>
 
         </div>
 
-        <script src="./assets/js/rotate.js"></script>
-        <script src="./assets/js/tab.js"></script>
-        <script src="./assets/js/navbar.js"></script>
+        <script src="{{ asset('/') }}assets/js/rotate.js"></script>
+        <script src="{{ asset('/') }}assets/js/tab.js"></script>
+        <script src="{{ asset('/') }}assets/js/navbar.js"></script>
         <script>
             // Temukan elemen gambar dengan ID "logo"
             const logoImage = document.getElementById('logo');
@@ -246,7 +206,7 @@
             // Tambahkan event listener untuk mengarahkan ke halaman lain saat gambar diklik
             logoImage.addEventListener('click', function() {
                 // Mengarahkan ke halaman index
-                window.location.href = './homepage';
+                window.location.href = '/homepage';
             });
 
             const menuContainer = document.querySelector(".bottom-exp");

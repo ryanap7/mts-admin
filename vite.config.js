@@ -29,6 +29,7 @@ export default defineConfig({
                 'resources/css/footer.css',
                 'resources/css/brandCategory.css',
                 'resources/css/product.css',
+                'resources/css/filament.css',
             ],
             refresh: true,
         }),

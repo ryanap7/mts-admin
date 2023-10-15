@@ -1,140 +1,26 @@
 <?php
 
-use App\Http\Controllers\Admin\BrandController;
-use App\Http\Controllers\Admin\CategoryController;
-use App\Http\Controllers\Admin\ContactController;
-use App\Http\Controllers\Admin\StatisticController;
+use App\Http\Controllers\BrandController;
+use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Auth\LoginController;
-
+use App\Http\Controllers\DownloadController;
+use App\Http\Controllers\HomepageController;
+use App\Http\Controllers\ProductController;
 
 // Public
-Route::view('/', 'clients.homepage');
-Route::view('/brand', 'clients.brand');
-Route::view('/category', 'clients.category');
-Route::view('/products', 'clients.product');
 Route::view('/detail-product', 'clients.detail-product');
 
-// Auth
-Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+Route::redirect('auth', 'admin')->name('login');
+Route::redirect('homepage', '/');
+Route::get('admin/catalogs/{catalog}/download', [DownloadController::class, 'downloadCatalog'])->name('download.catalog');
 
-Route::middleware('guest')->group(function () {
-    Route::get('auth', [LoginController::class, 'index'])->name('auth');
-    Route::post('auth', [LoginController::class, 'login'])->name('login.submit');
-});
+// Public
+Route::get('/', HomepageController::class)->name('homepage');
+Route::get('/brands', BrandController::class)->name('brands');
+Route::get('/categories', [CategoryController::class, 'index'])->name('categories');
+Route::get('/categories/{brand}', [CategoryController::class, 'brandCategory'])->name('categories.brand');
 
-
-// Admin Routes
-Route::prefix('admin')->middleware(['private'])->group(function () {
-    Route::view('/dashboard', 'index')->name('dashboard');
-
-    // Brands
-    Route::get('/brands', [BrandController::class, 'index'])->name('brands.index');
-
-    // Categories
-    Route::get('/categories', CategoryController::class)->name('categories.index');
-
-    // Statistics
-    Route::get('statistics', [StatisticController::class, 'index'])->name('statistics');
-    Route::patch('/statistics', [StatisticController::class, 'update'])->name('statistics.update');
-
-    // Contacts
-    Route::get('contacts', [ContactController::class, 'index'])->name('contacts');
-    Route::patch('/contacts', [ContactController::class, 'update'])->name('contacts.update');
-});
-
-
-Route::view('/apps/chat', 'apps.chat');
-Route::view('/apps/mailbox', 'apps.mailbox');
-Route::view('/apps/todolist', 'apps.todolist');
-Route::view('/apps/notes', 'apps.notes');
-Route::view('/apps/scrumboard', 'apps.scrumboard');
-Route::view('/apps/contacts', 'apps.contacts');
-Route::view('/apps/calendar', 'apps.calendar');
-
-Route::view('/apps/invoice/list', 'apps.invoice.list');
-Route::view('/apps/invoice/preview', 'apps.invoice.preview');
-Route::view('/apps/invoice/add', 'apps.invoice.add');
-Route::view('/apps/invoice/edit', 'apps.invoice.edit');
-
-Route::view('/components/tabs', 'ui-components.tabs');
-Route::view('/components/accordions', 'ui-components.accordions');
-Route::view('/components/modals', 'ui-components.modals');
-Route::view('/components/cards', 'ui-components.cards');
-Route::view('/components/carousel', 'ui-components.carousel');
-Route::view('/components/countdown', 'ui-components.countdown');
-Route::view('/components/counter', 'ui-components.counter');
-Route::view('/components/sweetalert', 'ui-components.sweetalert');
-Route::view('/components/timeline', 'ui-components.timeline');
-Route::view('/components/notifications', 'ui-components.notifications');
-Route::view('/components/media-object', 'ui-components.media-object');
-Route::view('/components/list-group', 'ui-components.list-group');
-Route::view('/components/pricing-table', 'ui-components.pricing-table');
-Route::view('/components/lightbox', 'ui-components.lightbox');
-
-Route::view('/elements/alerts', 'elements.alerts');
-Route::view('/elements/avatar', 'elements.avatar');
-Route::view('/elements/badges', 'elements.badges');
-Route::view('/elements/breadcrumbs', 'elements.breadcrumbs');
-Route::view('/elements/buttons', 'elements.buttons');
-Route::view('/elements/buttons-group', 'elements.buttons-group');
-Route::view('/elements/color-library', 'elements.color-library');
-Route::view('/elements/dropdown', 'elements.dropdown');
-Route::view('/elements/infobox', 'elements.infobox');
-Route::view('/elements/jumbotron', 'elements.jumbotron');
-Route::view('/elements/loader', 'elements.loader');
-Route::view('/elements/pagination', 'elements.pagination');
-Route::view('/elements/popovers', 'elements.popovers');
-Route::view('/elements/progress-bar', 'elements.progress-bar');
-Route::view('/elements/search', 'elements.search');
-Route::view('/elements/tooltips', 'elements.tooltips');
-Route::view('/elements/treeview', 'elements.treeview');
-Route::view('/elements/typography', 'elements.typography');
-
-Route::view('/charts', 'charts');
-Route::view('/font-icons', 'font-icons');
-Route::view('/dragndrop', 'dragndrop');
-
-Route::view('/tables', 'tables');
-
-Route::view('/datatables/advanced', 'datatables.advanced');
-Route::view('/datatables/alt-pagination', 'datatables.alt-pagination');
-Route::view('/datatables/basic', 'datatables.basic');
-Route::view('/datatables/checkbox', 'datatables.checkbox');
-Route::view('/datatables/clone-header', 'datatables.clone-header');
-Route::view('/datatables/column-chooser', 'datatables.column-chooser');
-Route::view('/datatables/export', 'datatables.export');
-Route::view('/datatables/multi-column', 'datatables.multi-column');
-Route::view('/datatables/multiple-tables', 'datatables.multiple-tables');
-Route::view('/datatables/order-sorting', 'datatables.order-sorting');
-Route::view('/datatables/range-search', 'datatables.range-search');
-Route::view('/datatables/skin', 'datatables.skin');
-Route::view('/datatables/sticky-header', 'datatables.sticky-header');
-
-Route::view('/forms/basic', 'forms.basic');
-Route::view('/forms/input-group', 'forms.input-group');
-Route::view('/forms/layouts', 'forms.layouts');
-Route::view('/forms/validation', 'forms.validation');
-Route::view('/forms/input-mask', 'forms.input-mask');
-Route::view('/forms/select2', 'forms.select2');
-Route::view('/forms/touchspin', 'forms.touchspin');
-Route::view('/forms/checkbox-radio', 'forms.checkbox-radio');
-Route::view('/forms/switches', 'forms.switches');
-Route::view('/forms/wizards', 'forms.wizards');
-Route::view('/forms/file-upload', 'forms.file-upload');
-Route::view('/forms/quill-editor', 'forms.quill-editor');
-Route::view('/forms/markdown-editor', 'forms.markdown-editor');
-Route::view('/forms/date-picker', 'forms.date-picker');
-Route::view('/forms/clipboard', 'forms.clipboard');
-
-Route::view('/users/profile', 'users.profile');
-Route::view('/users/user-account-settings', 'users.user-account-settings');
-
-Route::view('/pages/knowledge-base', 'pages.knowledge-base');
-Route::view('/pages/contact-us', 'pages.contact-us');
-Route::view('/pages/faq', 'pages.faq');
-Route::view('/pages/coming-soon', 'pages.coming-soon');
-Route::view('/pages/error404', 'pages.error404');
-Route::view('/pages/error500', 'pages.error500');
-Route::view('/pages/error503', 'pages.error503');
-Route::view('/pages/maintenence', 'pages.maintenence');
+// Product
+Route::get('/products', [ProductController::class, 'index'])->name('products.index');
+Route::get('/products/{product}', [ProductController::class, 'show'])->name('products.show');
+Route::get('/categories/products/{category}', [ProductController::class, 'productCategory'])->name('products.category');

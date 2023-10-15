@@ -16,6 +16,6 @@ class AuthenticatedMiddleware
             return $next($request);
         }
 
-        return redirect('/auth');
+        return redirect('/admin/login');
     }
 }

@@ -16,7 +16,8 @@ class BrandSeeder extends Seeder
         $brands = ['Asus', 'Sansung', 'Apple'];
         foreach ($brands as $brand) {
             Brand::create([
-                'name' => $brand
+                'name' => $brand,
+                'description' => '<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet, incidunt tenetur repellat numquam id voluptas ea sit dolor dolorum error.</p>'
             ]);
         }
     }

@@ -51,7 +51,7 @@
         <!-- Meta Tags Generated via https://www.opengraph.xyz -->
         <link
             rel="icon"
-            href="./assets/favicon/favicon.ico"
+            href="{{ asset('/') }}assets/favicon/favicon.ico"
             type="image/x-icon"
         />
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -66,14 +66,14 @@
             <div class="sidebare">
                 <div class="btn-close">
                     <img
-                        src="./assets/icons/close.svg"
+                        src="{{ asset('/') }}assets/icons/close.svg"
                         alt="icon"
                         id="btn-close"
                     />
                 </div>
                 <ul>
                     <li>
-                        <a href="./homepage">HOMEPAGE</a>
+                        <a href="{{ route('homepage') }}">HOMEPAGE</a>
                     </li>
                     <li>
                         <a href="#brands">BRANDS</a>
@@ -86,7 +86,7 @@
                 <div class="logo-navbar5-mz5">
                     <img
                         loading="lazy"
-                        src="./assets/images/logoMTS.png"
+                        src="{{ asset('/') }}assets/images/logoMTS.png"
                         alt="logo"
                         id="logo"
                     />
@@ -99,7 +99,7 @@
                 <div class="content-navbar5-mz5">
                     <ul class="content1-navbar5-mz5">
                         <li>
-                            <a href="./homepage">| HOMEPAGE |</a>
+                            <a href="{{ route('homepage') }}">| HOMEPAGE |</a>
                         </li>
                         <li>
                             <a href="#brands">| BRANDS |</a>
@@ -132,7 +132,7 @@
                 </div>
                 <div class="section3-right-section3mz4">
                     <div class="image-section3-section3mz4">
-                        <img src="./assets/images/kamera.jpeg" alt="image" />
+                        <img src="{{ asset('/') }}assets/images/kamera.jpeg" alt="image" />
                     </div>
                 </div>
             </div>
@@ -146,126 +146,33 @@
                 </div>
                 <div class="bottom-exp">
                     <div class="wrap-bottom-exp">
+
+                        {{-- Brands --}}
+                        @foreach ($brands as $brand)
                         <div class="card-exp">
-                            <a href="./category">
+                            <a href="{{ route('categories.brand', $brand) }}">
                                 <div class="card-top-exp">
+                                    @if ($brand->image != null) {
+                                        <img src="{{ asset('/storage/' . $brand->image) }}"
+                                        alt="card-image"/>
+                                    }
+                                    @else
                                     <img
-                                        src="./assets/images/nike2.png"
+                                        src="{{ asset('/') }}assets/images/nike2.png"
                                         alt="card-image"
-                                    />
+                                    />  
+                                    @endif
                                 </div>
                                 <div class="card-bottom-exp">
                                     <div class="title-bottom-exp">
-                                        <h4>ASUS</h4>
+                                        <h4>{{ $brand->name }}</h4>
                                     </div>
                                 </div>
                             </a>
                         </div>
-                        <div class="card-exp">
-                            <a href="./category">
-                                <div class="card-top-exp">
-                                    <img
-                                        src="./assets/images/nike2.png"
-                                        alt="card-image"
-                                    />
-                                </div>
-                                <div class="card-bottom-exp">
-                                    <div class="title-bottom-exp">
-                                        <h4>LENOVO</h4>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="card-exp">
-                            <a href="./category">
-                                <div class="card-top-exp">
-                                    <img
-                                        src="./assets/images/nike2.png"
-                                        alt="card-image"
-                                    />
-                                </div>
-                                <div class="card-bottom-exp">
-                                    <div class="title-bottom-exp">
-                                        <h4>ADIDAS</h4>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="card-exp">
-                            <a href="./category">
-                                <div class="card-top-exp">
-                                    <img
-                                        src="./assets/images/nike2.png"
-                                        alt="card-image"
-                                    />
-                                </div>
-                                <div class="card-bottom-exp">
-                                    <div class="title-bottom-exp">
-                                        <h4>NIKE</h4>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="card-exp">
-                            <a href="./category">
-                                <div class="card-top-exp">
-                                    <img
-                                        src="./assets/images/nike2.png"
-                                        alt="card-image"
-                                    />
-                                </div>
-                                <div class="card-bottom-exp">
-                                    <div class="title-bottom-exp">
-                                        <h4>ADIDAS</h4>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="card-exp">
-                            <a href="./category">
-                                <div class="card-top-exp">
-                                    <img
-                                        src="./assets/images/nike2.png"
-                                        alt="card-image"
-                                    />
-                                </div>
-                                <div class="card-bottom-exp">
-                                    <div class="title-bottom-exp">
-                                        <h4>ASUS</h4>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="card-exp">
-                            <a href="./category">
-                                <div class="card-top-exp">
-                                    <img
-                                        src="./assets/images/nike2.png"
-                                        alt="card-image"
-                                    />
-                                </div>
-                                <div class="card-bottom-exp">
-                                    <div class="title-bottom-exp">
-                                        <h4>NIKE</h4>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="card-exp">
-                            <a href="./category">
-                                <div class="card-top-exp">
-                                    <img
-                                        src="./assets/images/nike2.png"
-                                        alt="card-image"
-                                    />
-                                </div>
-                                <div class="card-bottom-exp">
-                                    <div class="title-bottom-exp">
-                                        <h4>LENOVO</h4>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+                        @endforeach
+
+                        
                     </div>
                 </div>
             </div>
@@ -276,51 +183,26 @@
                 <div class="group-list-hdm">
                     <ul>
                         <h3>PHONE</h3>
-                        <a href="https://wa.me/6285881308687" target="_blank">
-                            <li>
-                                <img
-                                    loading="lazy"
-                                    src="./assets/icons/phone.svg"
-                                    alt="icon"
-                                />
-                                +6285881308687
-                            </li>
+                        <a href="https://wa.me/{{ $contact->phone }}" target="_blank">
+                            <li><img loading="lazy" src="{{ asset('/') }}assets/icons/phone.svg" alt="icon" /> {{ $contact->phone }}</li>
                         </a>
                     </ul>
                 </div>
                 <div class="group-list-hdm">
                     <ul>
                         <h3>EMAIL</h3>
-                        <a
-                            href="mailto:sales@mandiri-technology-sejahtera.com"
-                            target="__blank"
-                        >
-                            <li>
-                                <img
-                                    loading="lazy"
-                                    src="./assets/icons/email.svg"
-                                    alt="icon"
-                                />
-                                sales@mandiri-technology-sejahtera.com
-                            </li>
+                        <a href="mailto:{{ $contact->email }}" target="__blank">
+                            <li><img loading="lazy" src="{{ asset('/') }}assets/icons/email.svg" alt="icon" /> {{ $contact->email }}</li>
                         </a>
                     </ul>
                 </div>
                 <div class="group-list-hdm">
                     <ul>
                         <h3>ADDRESS</h3>
-                        <a
-                            href="https://maps.app.goo.gl/iBKCUC3FyFci5jR17"
-                            target="__blank"
-                        >
+                        <a href="{{ $contact->google_map_link }}" target="__blank">
                             <li>
-                                <img
-                                    loading="lazy"
-                                    src="./assets/icons/location.svg"
-                                    alt="icon"
-                                />
-                                JL Tanjung Duren Raya No.4 Kav 373 Jakarta –
-                                Barat 11470
+                                <img loading="lazy" src="{{ asset('/') }}assets/icons/location.svg" alt="icon" />
+                                {{ $contact->address }}
                             </li>
                         </a>
                     </ul>
@@ -336,10 +218,10 @@
 
         <a href="https://wa.me/6285881308687" target="_blank">
             <div class="wa-feature">
-                <img src="./assets/images/wa.png" alt="wa" />
+                <img src="{{ asset('/') }}assets/images/wa.png" alt="wa" />
             </div>
         </a>
-        <script src="./assets/js/navbar.js"></script>
+        <script src="{{ asset('/') }}assets/js/navbar.js"></script>
 
         <script>
             const titleElement = document.querySelector(".title-hero-bmw");
@@ -392,7 +274,7 @@
             // Tambahkan event listener untuk mengarahkan ke halaman lain saat gambar diklik
             logoImage.addEventListener("click", function () {
                 // Mengarahkan ke halaman index
-                window.location.href = "./homepage";
+                window.location.href = "/homepage";
             });
 
             const menuContainer = document.querySelector(".bottom-exp");

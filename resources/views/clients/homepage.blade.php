@@ -24,13 +24,13 @@
     <meta name="twitter:image" content="https://raw.githubusercontent.com/khoirulhudaa/MTS/main/assets/images/logoIcon.png">
 
     <!-- Meta Tags Generated via https://www.opengraph.xyz -->
-    <link rel="icon" href="./assets/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{{ asset('/') }}assets/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     @vite(['resources/css/navbar.css'])
     @vite(['resources/css/homepage.css'])
     @vite(['resources/css/footer.css'])
-    <script src="./assets/js/counts.js"></script>
+    <script src="{{ asset('/') }}assets/js/counts.js"></script>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZD0FFFK8J"></script>
     <script>
@@ -51,7 +51,7 @@
 
         <div class="sidebare">
             <div class="btn-close">
-                <img src="./assets/icons/close.svg" alt="icon" id="btn-close">
+                <img src="{{ asset('/') }}assets/icons/close.svg" alt="icon" id="btn-close">
             </div>
             <ul>
                 <li>
@@ -69,7 +69,7 @@
 
         <div class="container-navbar5-mz5">
             <div class="logo-navbar5-mz5">
-                <img loading="lazy" src="./assets/images/logoMTS.png" alt="logo" id="logo" />
+                <img loading="lazy" src="{{ asset('/') }}assets/images/logoMTS.png" alt="logo" id="logo" />
             </div>
             <div class="btn-toggle" id="btn-toggle">
                 <div></div>
@@ -95,7 +95,7 @@
         <div class="parallax-container" id="HOME">
             <div class="container-hero-bmw">
                 <a href="https://unsplash.com/@alejandroescamilla?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
-                    <img loading="lazy" src="./assets/images/Banner.webp" class="bgnewhero" alt="https://unsplash.com/s/photos/meet?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" />
+                    <img loading="lazy" src="{{ asset('/') }}assets/images/Banner.webp" class="bgnewhero" alt="https://unsplash.com/s/photos/meet?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" />
                 </a>
                 <div class="overlay-bmw"></div>
                 <div class="content-hero-bmw">
@@ -135,7 +135,7 @@
             </p>
             <div class="container-card-mz1">
                 <div class="card-section5-left-mz1">
-                    <img loading="lazy" src="./assets/images/mockup1.jpg" alt="portfolio">
+                    <img loading="lazy" src="{{ asset('/') }}assets/images/mockup1.jpg" alt="portfolio">
                     <div class="skeleton-image">Loading...</div>
                     <div class="card-body-mz1">
                         <div>
@@ -150,7 +150,7 @@
                                 <h1>Title Porto</h1>
                             </div>
                         </div>
-                        <img loading="lazy" src="./assets/images/mockup2.jpg" alt="portfolio">
+                        <img loading="lazy" src="{{ asset('/') }}assets/images/mockup2.jpg" alt="portfolio">
                         <div class="skeleton-image">Loading...</div>
                     </div>
                     <div class="card-sections3-mz1">
@@ -159,30 +159,30 @@
                                 <h1>Title Porto</h1>
                             </div>
                         </div>
-                        <img loading="lazy" src="./assets/images/mockup3.jpg" alt="portfolio">
+                        <img loading="lazy" src="{{ asset('/') }}assets/images/mockup3.jpg" alt="portfolio">
                         <div class="skeleton-image">Loading...</div>
                     </div>
                 </div>
             </div>
             <div class="wrapper-percentation">
                 <div>
-                    <img loading="lazy" src="./assets/icons/projects.svg" alt="" />
-                    <h3 id="completed-projects">0</h3>
+                    <img loading="lazy" src="{{ asset('/') }}assets/icons/projects.svg" alt="" />
+                    <h3 id="completed-projects">{{ $statistics[0]->value ?? '0' }}</h3>
                     <p>PROJECTS COMPLETED</p>
                 </div>
                 <div>
-                    <img loading="lazy" src="./assets/icons/customers.svg" alt="" />
-                    <h3 id="total-customers">0</h3>
+                    <img loading="lazy" src="{{ asset('/') }}assets/icons/customers.svg" alt="" />
+                    <h3 id="total-customers">{{ $statistics[1]->value ?? '0' }}</h3>
                     <p>CUSTOMERS</p>
                 </div>
                 <div>
-                    <img loading="lazy" src="./assets/icons/products.svg" alt="" />
-                    <h3 id="total-products">0</h3>
+                    <img loading="lazy" src="{{ asset('/') }}assets/icons/products.svg" alt="" />
+                    <h3 id="total-products">{{ $statistics[2]->value ?? '0' }}</h3>
                     <p>PRODUCTS ME</p>
                 </div>
                 <div>
-                    <img loading="lazy" src="./assets/icons/portofolio.svg" alt="" />
-                    <h3 id="portfolio-count">0</h3>
+                    <img loading="lazy" src="{{ asset('/') }}assets/icons/portofolio.svg" alt="" />
+                    <h3 id="portfolio-count">{{ $statistics[3]->value ?? '0' }}</h3>
                     <p>PORTFOLIO</p>
                 </div>
             </div>
@@ -195,72 +195,21 @@
                 We have built and developed many products professionally
             </p>
             <div class="wrap-foto-mou">
+
+                {{-- Products --}}
+                @foreach ($products as $product)
                 <div class="foto-mou">
-                    <a href="./detail-product">
+                    <a href="{{ route('products.show', $product) }}">
                         <div class="skeleton-card">
                             <div class="skeleton-image">Loading...</div>
                         </div>
-                        <img loading="lazy" src="./assets/images/cpu.jpeg" alt="image" />
+                        <img loading="lazy" src="{{ asset('/storage/' . $product->image) }}" alt="image" />
                     </a>
                 </div>
-                <div class="foto-mou">
-                    <a href="./detail-product">
-                        <div class="skeleton-card">
-                            <div class="skeleton-image">Loading...</div>
-                        </div>
-                        <img loading="lazy" src="./assets/images/vga.jpeg" alt="image" />
-                    </a>
-                </div>
-                <div class="foto-mou">
-                    <a href="./detail-product">
-                        <div class="skeleton-card">
-                            <div class="skeleton-image">Loading...</div>
-                        </div>
-                        <img loading="lazy" src="./assets/images/keyboard.jpeg" alt="image" />
-                    </a>
-                </div>
-                <div class="foto-mou">
-                    <a href="./detail-product">
-                        <div class="skeleton-card">
-                            <div class="skeleton-image">Loading...</div>
-                        </div>
-                        <img loading="lazy" src="./assets/images/laptop.jpeg" alt="image" />
-                    </a>
-                </div>
-                <div class="foto-mou">
-                    <a href="./detail-product">
-                        <div class="skeleton-card">
-                            <div class="skeleton-image">Loading...</div>
-                        </div>
-                        <img loading="lazy" src="./assets/images/kamera.jpeg" alt="image" />
-                    </a>
-                </div>
-                <div class="foto-mou">
-                    <a href="./detail-product">
-                        <div class="skeleton-card">
-                            <div class="skeleton-image">Loading...</div>
-                        </div>
-                        <img loading="lazy" src="./assets/images/shoes.jpeg" alt="image" />
-                    </a>
-                </div>
-                <div class="foto-mou">
-                    <a href="./detail-product">
-                        <div class="skeleton-card">
-                            <div class="skeleton-image">Loading...</div>
-                        </div>
-                        <img loading="lazy" src="./assets/images/kaos.jpeg" alt="image" />
-                    </a>
-                </div>
-                <div class="foto-mou">
-                    <a href="./detail-product">
-                        <div class="skeleton-card">
-                            <div class="skeleton-image">Loading...</div>
-                        </div>
-                        <img loading="lazy" src="./assets/images/vga.jpeg" alt="image" />
-                    </a>
-                </div>
+                @endforeach
+                
             </div>
-            <a href="./brand">
+            <a href="{{ route('brands') }}">
                 <button class="btn-form">Show More</button>
             </a>
         </div>
@@ -282,69 +231,24 @@
             </div>
             <div class="bottom-exp">
                 <div class="wrap-bottom-exp">
+
+                    {{-- Best Seller --}}
+                    @foreach ($bestSeller as $product)
                     <div class="card-exp">
                         <div class="card-top-exp">
-                            <img loading="lazy" src="./assets/images/cpu.jpeg" alt="card-image">
+                            <img loading="lazy" src="{{ asset('/storage/' . $product->image ) }}" alt="card-image">
                         </div>
                         <div class="card-bottom-exp">
                             <div class="title-bottom-exp">
-                                <h4>APPLE MACKBOOK PRO</h4>
-                                <p>$150.00</p>
+                                <h4>{{ $product->name }}</h4>
+                                <p>{{ $product->price }}</p>
                             </div>
-                            <small>APPLE</small>
+                            <small>{{ $product->brand->name ?? '' }}</small>
                             </p>
                         </div>
                     </div>
-                    <div class="card-exp">
-                        <div class="card-top-exp">
-                            <img loading="lazy" src="./assets/images/laptop.jpeg" alt="card-image">
-                        </div>
-                        <div class="card-bottom-exp">
-                            <div class="title-bottom-exp">
-                                <h4>APPLE MACKBOOK PRO</h4>
-                                <p>$150.00</p>
-                            </div>
-                            <small>APPLE</small>
-                        </div>
-                    </div>
-                    <div class="card-exp">
-                        <div class="card-top-exp">
-                            <img loading="lazy" src="./assets/images/kamera.jpeg" alt="card-image">
-                        </div>
-                        <div class="card-bottom-exp">
-                            <div class="title-bottom-exp">
-                                <h4>APPLE MACKBOOK PRO</h4>
-                                <p>$150.00</p>
-                            </div>
-                            <small>APPLE</small>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="card-exp">
-                        <div class="card-top-exp">
-                            <img loading="lazy" src="./assets/images/keyboard.jpeg" alt="card-image">
-                        </div>
-                        <div class="card-bottom-exp">
-                            <div class="title-bottom-exp">
-                                <h4>APPLE MACKBOOK PRO</h4>
-                                <p>$150.00</p>
-                            </div>
-                            <small>APPLE</small>
-                        </div>
-                    </div>
-                    <div class="card-exp">
-                        <div class="card-top-exp">
-                            <img loading="lazy" src="./assets/images/shoes.jpeg" alt="card-image">
-                        </div>
-                        <div class="card-bottom-exp">
-                            <div class="title-bottom-exp">
-                                <h4>APPLE MACKBOOK PRO</h4>
-                                <p>$150.00</p>
-                            </div>
-                            <small>APPLE</small>
-                            </p>
-                        </div>
-                    </div>
+                    @endforeach
+
                 </div>
             </div>
         </div>
@@ -353,37 +257,37 @@
             <h1>OUR CUSTOMERS</h1>
             <div class="slider-container">
                 <div class="slider">
-                    <img class="unOurCus" id="diskominfo" src="./assets/images/diskominfo.webp" alt="sponsor" />
-                    <img class="unOurCus" id="trisakti" src="./assets/images/trisakti.webp" alt="sponsor" />
-                    <img class="ourCus" id="mensa" src="./assets/images/Our Cus Mensa.png" alt="sponsor" />
-                    <img class="ourCus" id="landison" src="./assets/images/Our Cus Landson.png" alt="sponsor" />
-                    <img class="unOurCus" id="otto" src="./assets/images/otto.webp" alt="sponsor" />
-                    <img class="unOurCus" id="andini" src="./assets/images/andini.webp" alt="sponsor" />
-                    <img class="unOurCus" id="akr" src="./assets/images/akr.webp" alt="sponsor" />
-                    <img class="unOurCus" id="indocapital" src="./assets/images/indocapital.webp" alt="sponsor" />
-                    <img id="succor" src="./assets/images/succor.webp" alt="sponsor" />
-                    <img class="ourCus" id="planetBan" src="./assets/images/Our Cus Planetban.png" alt="sponsor" />
-                    <img class="ourCus" id="smr" src="./assets/images/Our Cus SMR.png" alt="sponsor" />
-                    <img class="unOurCus" id="rukun" src="./assets/images/rukun.webp" alt="sponsor" />
-                    <img class="unOurCus" id="gmf" src="./assets/images/gmf.webp" alt="sponsor" />
-                    <img class="unOurCus" id="diskominfo" src="./assets/images/diskominfo.webp" alt="sponsor" />
-                    <img class="unOurCus" id="trisakti" src="./assets/images/trisakti.webp" alt="sponsor" />
-                    <img class="ourCus" id="mensa" src="./assets/images/Our Cus Mensa.png" alt="sponsor" />
-                    <img class="ourCus" id="landison" src="./assets/images/Our Cus Landson.png" alt="sponsor" />
-                    <img class="unOurCus" id="otto" src="./assets/images/otto.webp" alt="sponsor" />
-                    <img class="unOurCus" id="andini" src="./assets/images/andini.webp" alt="sponsor" />
-                    <img class="unOurCus" id="akr" src="./assets/images/akr.webp" alt="sponsor" />
-                    <img class="unOurCus" id="indocapital" src="./assets/images/indocapital.webp" alt="sponsor" />
-                    <img class="unOurCus" id="ubm" src="./assets/images/ubm.webp" alt="sponsor" />
-                    <img class="ourCus" id="cas" src="./assets/images/Our Cus CAS.png" alt="sponsor" />
-                    <img class="unOurCus" id="succor" src="./assets/images/succor.webp" alt="sponsor" />
-                    <img class="ourCus" id="planetBan" src="./assets/images/Our Cus Planetban.png" alt="sponsor" />
-                    <img class="ourCus" id="smr" src="./assets/images/Our Cus SMR.png" alt="sponsor" />
-                    <img class="unOurCus" id="jhl" src="./assets/images/jhl.webp" alt="sponsor" />
-                    <img class="unOurCus" id="ubm" src="./assets/images/ubm.webp" alt="sponsor" />
-                    <img class="unOurCus" id="rukun" src="./assets/images/rukun.webp" alt="sponsor" />
-                    <img class="unOurCus" id="gmf" src="./assets/images/gmf.webp" alt="sponsor" />
-                    <img class="unOurCus" id="tcl" src="./assets/images/tcl.webp" alt="sponsor" />
+                    <img class="unOurCus" id="diskominfo" src="{{ asset('/') }}assets/images/diskominfo.webp" alt="sponsor" />
+                    <img class="unOurCus" id="trisakti" src="{{ asset('/') }}assets/images/trisakti.webp" alt="sponsor" />
+                    <img class="ourCus" id="mensa" src="{{ asset('/') }}assets/images/Our Cus Mensa.png" alt="sponsor" />
+                    <img class="ourCus" id="landison" src="{{ asset('/') }}assets/images/Our Cus Landson.png" alt="sponsor" />
+                    <img class="unOurCus" id="otto" src="{{ asset('/') }}assets/images/otto.webp" alt="sponsor" />
+                    <img class="unOurCus" id="andini" src="{{ asset('/') }}assets/images/andini.webp" alt="sponsor" />
+                    <img class="unOurCus" id="akr" src="{{ asset('/') }}assets/images/akr.webp" alt="sponsor" />
+                    <img class="unOurCus" id="indocapital" src="{{ asset('/') }}assets/images/indocapital.webp" alt="sponsor" />
+                    <img id="succor" src="{{ asset('/') }}assets/images/succor.webp" alt="sponsor" />
+                    <img class="ourCus" id="planetBan" src="{{ asset('/') }}assets/images/Our Cus Planetban.png" alt="sponsor" />
+                    <img class="ourCus" id="smr" src="{{ asset('/') }}assets/images/Our Cus SMR.png" alt="sponsor" />
+                    <img class="unOurCus" id="rukun" src="{{ asset('/') }}assets/images/rukun.webp" alt="sponsor" />
+                    <img class="unOurCus" id="gmf" src="{{ asset('/') }}assets/images/gmf.webp" alt="sponsor" />
+                    <img class="unOurCus" id="diskominfo" src="{{ asset('/') }}assets/images/diskominfo.webp" alt="sponsor" />
+                    <img class="unOurCus" id="trisakti" src="{{ asset('/') }}assets/images/trisakti.webp" alt="sponsor" />
+                    <img class="ourCus" id="mensa" src="{{ asset('/') }}assets/images/Our Cus Mensa.png" alt="sponsor" />
+                    <img class="ourCus" id="landison" src="{{ asset('/') }}assets/images/Our Cus Landson.png" alt="sponsor" />
+                    <img class="unOurCus" id="otto" src="{{ asset('/') }}assets/images/otto.webp" alt="sponsor" />
+                    <img class="unOurCus" id="andini" src="{{ asset('/') }}assets/images/andini.webp" alt="sponsor" />
+                    <img class="unOurCus" id="akr" src="{{ asset('/') }}assets/images/akr.webp" alt="sponsor" />
+                    <img class="unOurCus" id="indocapital" src="{{ asset('/') }}assets/images/indocapital.webp" alt="sponsor" />
+                    <img class="unOurCus" id="ubm" src="{{ asset('/') }}assets/images/ubm.webp" alt="sponsor" />
+                    <img class="ourCus" id="cas" src="{{ asset('/') }}assets/images/Our Cus CAS.png" alt="sponsor" />
+                    <img class="unOurCus" id="succor" src="{{ asset('/') }}assets/images/succor.webp" alt="sponsor" />
+                    <img class="ourCus" id="planetBan" src="{{ asset('/') }}assets/images/Our Cus Planetban.png" alt="sponsor" />
+                    <img class="ourCus" id="smr" src="{{ asset('/') }}assets/images/Our Cus SMR.png" alt="sponsor" />
+                    <img class="unOurCus" id="jhl" src="{{ asset('/') }}assets/images/jhl.webp" alt="sponsor" />
+                    <img class="unOurCus" id="ubm" src="{{ asset('/') }}assets/images/ubm.webp" alt="sponsor" />
+                    <img class="unOurCus" id="rukun" src="{{ asset('/') }}assets/images/rukun.webp" alt="sponsor" />
+                    <img class="unOurCus" id="gmf" src="{{ asset('/') }}assets/images/gmf.webp" alt="sponsor" />
+                    <img class="unOurCus" id="tcl" src="{{ asset('/') }}assets/images/tcl.webp" alt="sponsor" />
                 </div>
             </div>
         </section>
@@ -435,27 +339,26 @@
                 <div class="group-list-hdm">
                     <ul>
                         <h3>PHONE</h3>
-                        <a href="https://wa.me/6285881308687" target="_blank">
-                            <li><img loading="lazy" src="./assets/icons/phone.svg" alt="icon" /> +6285881308687</li>
+                        <a href="https://wa.me/{{ $contact->phone }}" target="_blank">
+                            <li><img loading="lazy" src="{{ asset('/') }}assets/icons/phone.svg" alt="icon" /> {{ $contact->phone }}</li>
                         </a>
                     </ul>
                 </div>
                 <div class="group-list-hdm">
                     <ul>
                         <h3>EMAIL</h3>
-                        <a href="mailto:sales@mandiri-technology-sejahtera.com" target="__blank">
-                            <li><img loading="lazy" src="./assets/icons/email.svg" alt="icon" /> sales@mandiri-technology-sejahtera.com</li>
+                        <a href="mailto:{{ $contact->email }}" target="__blank">
+                            <li><img loading="lazy" src="{{ asset('/') }}assets/icons/email.svg" alt="icon" /> {{ $contact->email }}</li>
                         </a>
                     </ul>
                 </div>
                 <div class="group-list-hdm">
                     <ul>
                         <h3>ADDRESS</h3>
-                        <a href="https://maps.app.goo.gl/iBKCUC3FyFci5jR17" target="__blank">
+                        <a href="{{ $contact->google_map_link }}" target="__blank">
                             <li>
-                                <img loading="lazy" src="./assets/icons/location.svg" alt="icon" />
-                                JL Tanjung Duren Raya No.4 Kav 373
-                                Jakarta – Barat 11470
+                                <img loading="lazy" src="{{ asset('/') }}assets/icons/location.svg" alt="icon" />
+                                {{ $contact->address }}
                             </li>
                         </a>
                     </ul>
@@ -468,7 +371,7 @@
 
         <a href="https://wa.me/6285881308687" target="_blank">
             <div class="wa-feature">
-                <img src="./assets/images/wa.png" alt="wa">
+                <img src="{{ asset('/') }}assets/images/wa.png" alt="wa">
             </div>
         </a>
 
@@ -505,7 +408,7 @@
         </script>
         <script src="https://apis.google.com/js/client.js?onload=init"></script>
 
-        <script src="./assets/js/slider.js"></script>
+        <script src="{{ asset('/') }}assets/js/slider.js"></script>
         <script>
             var i, acc = document.querySelectorAll("accordion-mz2");
             for (i = 0; i < acc.length; i++) acc[i].addEventListener("click", function() {
@@ -514,7 +417,7 @@
                 "block" === e.style.display ? e.style.display = "none" : e.style.display = "block";
             })
         </script>
-        <script src="./assets/js/navbar.js"></script>
+        <script src="{{ asset('/') }}assets/js/navbar.js"></script>
 
         <script>
             // Temukan elemen gambar dengan ID "logo"

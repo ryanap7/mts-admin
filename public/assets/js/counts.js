@@ -19,8 +19,13 @@ function startCounting(elementId, targetValue, duration) {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-    startCounting('completed-projects', 40, 3000); // 40 is the target value, 2000ms (2 seconds) is the duration
-    startCounting('total-customers', 2320, 3000); // 2320 is the target value, 2000ms (2 seconds) is the duration
-    startCounting('total-products', 134, 3000); // 134 is the target value, 2000ms (2 seconds) is the duration
-    startCounting('portfolio-count', 3, 3000); // 3 is the target value, 2000ms (2 seconds) is the duration
+    const valueCompleteProject = document.getElementById('completed-projects');
+    const valueCustomers = document.getElementById('total-customers');
+    const valueProduct = document.getElementById('total-products');
+    const valuePortfolio = document.getElementById('portfolio-count');
+
+    startCounting('completed-projects', parseInt(valueCompleteProject.innerHTML), 3000); // 40 is the target value, 2000ms (2 seconds) is the duration
+    startCounting('total-customers', parseInt(valueCustomers.innerHTML), 3000); // 2320 is the target value, 2000ms (2 seconds) is the duration
+    startCounting('total-products', parseInt(valueProduct.innerHTML), 3000); // 134 is the target value, 2000ms (2 seconds) is the duration
+    startCounting('portfolio-count', parseInt(valuePortfolio.innerHTML), 3000); // 3 is the target value, 2000ms (2 seconds) is the duration
 });
