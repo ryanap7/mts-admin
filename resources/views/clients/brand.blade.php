@@ -152,10 +152,9 @@
                         <div class="card-exp">
                             <a href="{{ route('categories.brand', $brand) }}">
                                 <div class="card-top-exp">
-                                    @if ($brand->image != null) {
+                                    @if ($brand->image != null)
                                         <img src="{{ asset('/storage/' . $brand->image) }}"
                                         alt="card-image"/>
-                                    }
                                     @else
                                     <img
                                         src="{{ asset('/') }}assets/images/nike2.png"

@@ -31,10 +31,10 @@ class ContactPage extends Page
     protected function getActions(): array
     {
         return [
-            EditAction::make('product')
-                ->label('Edit Product')
+            EditAction::make('contact')
+                ->label('Edit Contact')
                 ->modalWidth('md')
-                ->modalHeading('Edit Product')
+                ->modalHeading('Edit Contact')
                 ->mountUsing(fn (ComponentContainer $form) => $form->fill([
                     'phone' => $this->contact->phone,
                     'email' => $this->contact->email,

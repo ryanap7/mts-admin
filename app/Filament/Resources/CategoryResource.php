@@ -49,8 +49,8 @@ class CategoryResource extends Resource
                     ->directory('img/categories')
                     ->image()
                     ->maxSize(2048)
-                    ->hint('pastikan rasio image 3:2')
-                    ->imageCropAspectRatio('3:2')
+                    ->hint('pastikan rasio image 2:1')
+                    ->imageCropAspectRatio('2:1')
                     ->imageResizeTargetWidth('1000')
                     ->imageResizeTargetHeight('1000'),
                 Textarea::make('description')
