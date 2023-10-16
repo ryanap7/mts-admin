@@ -5,17 +5,22 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\BrandResource\Pages;
 use App\Filament\Resources\BrandResource\RelationManagers;
 use App\Models\Brand;
+use App\Models\Product;
+use Faker\Provider\ar_EG\Text;
 use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Toggle;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
-use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Columns\ToggleColumn;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class BrandResource extends Resource
@@ -37,21 +42,30 @@ class BrandResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('name')
-                    ->label('Nama')
-                    ->required()
-                    ->maxLength(255),
-                FileUpload::make('image')
-                    ->directory('img/brands')
-                    ->image()
-                    ->maxSize(2048)
-                    ->hint('pastikan rasio image 2:1')
-                    ->imageCropAspectRatio('2:1')
-                    ->imageResizeTargetWidth('1000')
-                    ->imageResizeTargetHeight('1000'),
-                RichEditor::make('description')
-                    ->label('Deskripsi')
-            ])->columns(1);
+                Grid::make(12)->schema([
+                    TextInput::make('name')
+                        ->label('Nama')
+                        ->required()
+                        ->maxLength(255)
+                        ->columnSpan(6),
+                    Toggle::make('status')
+                        ->label('Status')
+                        ->default(true)
+                        ->required()
+                        ->inline(false)
+                        ->columnSpan(6),
+                    FileUpload::make('image')
+                        ->directory('img/brands')
+                        ->image()
+                        ->maxSize(2048)
+                        ->hint('pastikan rasio image 2:1')
+                        ->imageCropAspectRatio('2:1')
+                        ->columnSpanFull(),
+                    RichEditor::make('description')
+                        ->label('Deskripsi')
+                        ->columnSpanFull()
+                ])
+            ]);
     }
 
     public static function table(Table $table): Table
@@ -73,7 +87,11 @@ class BrandResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                Tables\Actions\EditAction::make()
+                    ->mutateFormDataUsing(function (Model $record, array $data) {
+                        self::setStatus($record->id, $data['status']);
+                        return $data;
+                    }),
                 Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
@@ -86,5 +104,12 @@ class BrandResource extends Resource
         return [
             'index' => Pages\ManageBrands::route('/'),
         ];
+    }
+
+    public static function setStatus($id, $status)
+    {
+        Product::where('brand_id', $id)->update([
+            'status' => $status
+        ]);
     }
 }

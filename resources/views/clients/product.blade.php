@@ -108,7 +108,7 @@
                         </div>
                         <div class="child-product-right">
                             <h4>{{ $product->name }}</h3>
-                            <h1>{{ $product->price }}</h1>
+                            {{-- <h1>{{ $product->price }}</h1> --}}
                             <small>{{ $product->brand->name ?? '' }}</small>
                             <p>
                                 {{ $product->explanation }}

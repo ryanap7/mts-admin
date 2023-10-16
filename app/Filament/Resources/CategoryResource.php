@@ -50,9 +50,7 @@ class CategoryResource extends Resource
                     ->image()
                     ->maxSize(2048)
                     ->hint('pastikan rasio image 2:1')
-                    ->imageCropAspectRatio('2:1')
-                    ->imageResizeTargetWidth('1000')
-                    ->imageResizeTargetHeight('1000'),
+                    ->imageCropAspectRatio('2:1'),
                 Textarea::make('description')
                     ->label('Deskripsi'),
             ])->columns(1);

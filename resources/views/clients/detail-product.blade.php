@@ -114,14 +114,14 @@
                         <p>
                             {{ $product->explanation }}
                         </p>
-                        <div class="prize">
+                        {{-- <div class="prize">
                             {{ $product->price }}
                         </div>
                         <ul>
                             <li>Size Products: {{ $product->size }}</li>
                             <li>Total stock: {{ $product->stock }}</li>
                             <li>Condition product: {{ $product->condition }}</li>
-                        </ul>
+                        </ul> --}}
                     </div>
                 </div>
             </div>

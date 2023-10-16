@@ -14,7 +14,7 @@ class BrandController extends Controller
     public function __invoke(Request $request)
     {
         $contact = Contact::first();
-        $brands = Brand::orderBy('name', 'asc')->get();
+        $brands = Brand::whereStatus(true)->orderBy('name', 'asc')->get();
         return view('clients.brand', compact('contact', 'brands'));
     }
 }

@@ -19,10 +19,6 @@ return new class extends Migration
             $table->foreignIdFor(Category::class);
             $table->string('name');
             $table->text('explanation')->nullable();
-            $table->bigInteger('price');
-            $table->string('size');
-            $table->string('stock');
-            $table->string('condition');
             $table->text('description');
             $table->text('spesification');
             $table->string('image')->nullable();

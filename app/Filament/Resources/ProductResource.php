@@ -3,15 +3,13 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\ProductResource\Pages;
-use App\Filament\Resources\ProductResource\RelationManagers;
+use App\Filament\Resources\ProductResource\RelationManagers\CatalogsRelationManager;
 use App\Models\Category;
 use App\Models\Product;
 use Closure;
-use Filament\Forms;
 use Filament\Forms\Components\Card;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Grid;
-use Filament\Forms\Components\MarkdownEditor;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
@@ -22,8 +20,8 @@ use Filament\Resources\Table;
 use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ToggleColumn;
+use Filament\Tables\Filters\SelectFilter;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class ProductResource extends Resource
 {
@@ -68,38 +66,17 @@ class ProductResource extends Resource
                             ->maxLength(255)
                             ->required()
                             ->columnSpan(6),
-                        TextInput::make('price')->label('Harga')
-                            ->maxLength(255)
-                            ->required()
-                            ->placeholder('example: 200000')
-                            ->columnSpan(6),
-                        TextInput::make('size')->label('Ukuran')
-                            ->maxLength(255)
-                            ->required()
-                            ->placeholder('example: Small')
-                            ->columnSpan(6),
-                        TextInput::make('stock')->label('Stok')
-                            ->maxLength(255)
-                            ->required()
-                            ->placeholder('example: 120 Pcs')
-                            ->columnSpan(6),
-                        TextInput::make('condition')->label('Kondisi Barang')
-                            ->maxLength(255)
-                            ->required()
-                            ->placeholder('example: New')
-                            ->columnSpan(6),
                         FileUpload::make('image')->label('Photo')
                             ->image()
                             ->maxSize(2048)
                             ->directory('img/products')
                             ->columnSpan(6)
                             ->hint('pastikan rasio image 1:1')
-                            ->imageCropAspectRatio('1:1')
-                            ->imageResizeTargetWidth('1000')
-                            ->imageResizeTargetHeight('1000'),
+                            ->imageCropAspectRatio('1:1'),
                         Toggle::make('status')->label('Status')
                             ->required()
                             ->inline(false)
+                            ->default(true)
                             ->columnSpan(6),
                         RichEditor::make('description')->label('Deskripsi')
                             ->required()
@@ -108,7 +85,7 @@ class ProductResource extends Resource
                             ->required()
                             ->columnSpanFull(),
                     ])
-                ])
+                ]),
             ]);
     }
 
@@ -128,22 +105,15 @@ class ProductResource extends Resource
                     ->limit(35)
                     ->searchable()
                     ->sortable(),
-                TextColumn::make('stock')->label('Stok')
-                    ->limit(35)
-                    ->searchable()
-                    ->sortable(),
-                TextColumn::make('price')->label('Harga')
-                    ->money('idr', true)
-                    ->searchable()
-                    ->sortable(),
-                ToggleColumn::make('status')->label('Status'),
                 TextColumn::make('created_at')->label('Dibuat pada')
                     ->dateTime('d F Y')
                     ->searchable()
                     ->sortable(),
+                ToggleColumn::make('status')->label('Status'),
             ])
             ->filters([
-                //
+                SelectFilter::make('brand')->label('Brand')
+                    ->relationship('brand', 'name')
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
@@ -157,7 +127,7 @@ class ProductResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            CatalogsRelationManager::class
         ];
     }
 
