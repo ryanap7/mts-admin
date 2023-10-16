@@ -153,7 +153,7 @@
                 </div>
             </div>
 
-            <div class="footer-hdm">
+            <div class="footer-hdm" id="footer">
                 <div class="footer-right-hdm">
                     <div class="group-list-hdm">
                         <ul>
