@@ -57,8 +57,8 @@
                 <li>
                     <a href="#HOME">HOME</a>
                 </li>
-                <li>
-                    <a href="#ABOUT">ABOUT US</a>
+                <li id="about2">
+                    <a href="#ABOUT">ABOUTs US</a>
                 </li>
                 <li><a href="#PORTFOLIO">PORTFOLIOS</a></li>
                 <li>
