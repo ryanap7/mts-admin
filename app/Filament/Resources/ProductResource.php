@@ -22,6 +22,7 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ToggleColumn;
 use Filament\Tables\Filters\SelectFilter;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Validation\Rule;
 
 class ProductResource extends Resource
 {
@@ -71,8 +72,8 @@ class ProductResource extends Resource
                             ->maxSize(2048)
                             ->directory('img/products')
                             ->columnSpan(6)
-                            ->hint('pastikan rasio image 1:1')
-                            ->imageCropAspectRatio('1:1'),
+                            ->hint('pastikan ukuran image 1000px x 1000px')
+                            ->rules(Rule::dimensions()->maxWidth(1000)->maxHeight(1000)),
                         Toggle::make('status')->label('Status')
                             ->required()
                             ->inline(false)

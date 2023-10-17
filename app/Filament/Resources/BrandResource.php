@@ -22,6 +22,7 @@ use Filament\Tables\Columns\ToggleColumn;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Validation\Rule;
 
 class BrandResource extends Resource
 {
@@ -58,8 +59,8 @@ class BrandResource extends Resource
                         ->directory('img/brands')
                         ->image()
                         ->maxSize(2048)
-                        ->hint('pastikan rasio image 2:1')
-                        ->imageCropAspectRatio('2:1')
+                        ->hint('pastikan ukuran image 400px x 200px')
+                        ->rules(Rule::dimensions()->maxWidth(400)->maxHeight(200))
                         ->columnSpanFull(),
                     RichEditor::make('description')
                         ->label('Deskripsi')
