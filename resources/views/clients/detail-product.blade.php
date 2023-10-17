@@ -114,14 +114,12 @@
                         <p>
                             {{ $product->explanation }}
                         </p>
-                        {{-- <div class="prize">
-                            {{ $product->price }}
-                        </div>
-                        <ul>
-                            <li>Size Products: {{ $product->size }}</li>
-                            <li>Total stock: {{ $product->stock }}</li>
-                            <li>Condition product: {{ $product->condition }}</li>
-                        </ul> --}}
+
+                        <!-- Button downloada catalog -->
+                        <a>
+                            <button class="btn-form">Downloads catalog</button>
+                        </a>
+                        <!-- Button downloada catalog -->
                     </div>
                 </div>
             </div>
