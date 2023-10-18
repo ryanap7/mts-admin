@@ -116,17 +116,17 @@
                         </p>
 
                         <!-- Button downloada catalog -->
+                        @if ($product->catalogs)
                         <div class="wrapper-downloads">
-                            <div class="btn-download-file file" title="file">
-                                <img src="{{ asset('/assets/icons/file.svg') }}" alt="">
-                            </div>
-                            <div class="btn-download-file excel" title="excel">
-                                <img src="{{ asset('/assets/icons/excel.svg') }}" alt="">
-                            </div>
-                            <div class="btn-download-file pdf" title="pdf">
-                                <img src="{{ asset('/assets/icons/pdf.svg') }}" alt="">
-                            </div>
+                            @foreach ($product->catalogs as $catalog)
+                            <a href="{{ route('download.catalog', $catalog) }}">
+                                <div class="btn-download-file file" title="file">
+                                    <img src="{{ asset('/assets/icons/file.svg') }}" alt="">
+                                </div>
+                            </a>
+                            @endforeach
                         </div>
+                        @endif
                         <!-- Button downloada catalog -->
                     </div>
                 </div>

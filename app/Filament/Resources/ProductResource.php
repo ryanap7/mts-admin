@@ -81,9 +81,11 @@ class ProductResource extends Resource
                             ->columnSpan(6),
                         RichEditor::make('description')->label('Deskripsi')
                             ->required()
+                            ->hint('pastikan ukuran lebar image tidak lebih dari 250px')
                             ->columnSpanFull(),
                         RichEditor::make('spesification')->label('Spesifikasi')
                             ->required()
+                            ->hint('pastikan ukuran lebar image tidak lebih dari 250px')
                             ->columnSpanFull(),
                     ])
                 ]),

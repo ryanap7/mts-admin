@@ -36,10 +36,6 @@ class CatalogResource extends Resource
     {
         return $form
             ->schema([
-                Select::make('product_id')->label('Product')
-                    ->relationship('product', 'name')
-                    ->searchable()
-                    ->preload(),
                 TextInput::make('name')->label('Nama')
                     ->maxLength(255)
                     ->required(),
@@ -56,10 +52,6 @@ class CatalogResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('name')->label('Nama')
-                    ->limit(35)
-                    ->searchable()
-                    ->sortable(),
-                TextColumn::make('product.name')->label('Product')
                     ->limit(35)
                     ->searchable()
                     ->sortable(),

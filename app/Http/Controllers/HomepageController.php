@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Catalog;
 use App\Models\Contact;
 use App\Models\Product;
 use App\Models\Statistic;
@@ -17,6 +18,7 @@ class HomepageController extends Controller
         $contact = Contact::first();
         $bestSeller = Product::whereStatus(true)->inRandomOrder()->get();
         $statistics = Statistic::all();
-        return view('clients.homepage', compact('products', 'contact', 'bestSeller', 'statistics'));
+        $catalog = Catalog::whereNull('product_id')->first();
+        return view('clients.homepage', compact('products', 'contact', 'bestSeller', 'statistics', 'catalog'));
     }
 }

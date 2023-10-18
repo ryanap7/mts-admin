@@ -33,7 +33,7 @@ class CatalogsRelationManager extends RelationManager
                     ->acceptedFileTypes(['application/pdf', 'application/vnd.ms-excel', 'text/csv'])
                     ->required()
                     ->hint('pastikan file berbentuk pdf dan excel')
-            ]);
+            ])->columns(1);
     }
 
     public static function table(Table $table): Table
@@ -53,7 +53,8 @@ class CatalogsRelationManager extends RelationManager
                 //
             ])
             ->headerActions([
-                Tables\Actions\CreateAction::make(),
+                Tables\Actions\CreateAction::make()
+                    ->modalWidth('md'),
             ])
             ->actions([
                 Action::make('download')

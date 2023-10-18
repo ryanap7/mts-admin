@@ -83,7 +83,7 @@
             <div class="wrapper-products">
                 
                 <div class="info-list-products">
-                    <p>{{ $products->count() }} items in <b>Mobile accessory</b></p>
+                    <p>{{ $products->count() }} items in <b>{{ $category->name ?? 'All Products' }}</b></p>
                     <div class="wrapper-btn-info">
                         <div class="child-info">
                             <img src="{{ asset('/') }}assets/icons/chevron.svg" alt="icon" id="rotateIcon" />

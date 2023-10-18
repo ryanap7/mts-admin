@@ -105,7 +105,9 @@
                     <p class="text-hero-bmw">
                         We Delivering the Best Solution for Our Customer
                     </p>
-                    <div class="btn-hero-bmw">DOWNLOAD CATALOG</div>
+                    <a href="{{ $catalog != null ? route('download.catalog', $catalog) : '#' }}" style="text-decoration: none">
+                        <div class="btn-hero-bmw">DOWNLOAD CATALOG</div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -328,9 +330,11 @@
             <div class="section4-bottom">
                 <h1>Still have a questions?</h1>
                 <p>We're sorry we couldn't provide you with the information you were looking for. Please contact us and we'll be happy to help.</p>
-                <button><img src="https://images-builder.vercel.app/img/vector_section4mz2.svg" alt="icon">
-                    <span>Contact us</span>
-                </button>
+                <a href="mailto:{{ $contact->email }}" target="_blank" style="text-decoration: none">
+                    <button class="hover:cursor-pointer"><img src="https://images-builder.vercel.app/img/vector_section4mz2.svg" alt="icon">
+                        <span>Contact us</span>
+                    </button>
+                </a>
             </div>
         </section>
 

@@ -65,6 +65,7 @@ class BrandResource extends Resource
                     RichEditor::make('description')
                         ->label('Deskripsi')
                         ->columnSpanFull()
+                        ->hint('pastikan ukuran lebar image tidak lebih dari 250px')
                 ])
             ]);
     }
