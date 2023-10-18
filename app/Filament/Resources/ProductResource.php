@@ -116,7 +116,11 @@ class ProductResource extends Resource
             ])
             ->filters([
                 SelectFilter::make('brand')->label('Brand')
-                    ->relationship('brand', 'name')
+                    ->relationship('brand', 'name'),
+                SelectFilter::make('status')->options([
+                    true => 'Aktif',
+                    false => 'Tidak Aktif'
+                ])
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
