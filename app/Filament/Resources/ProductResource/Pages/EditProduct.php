@@ -21,4 +21,13 @@ class EditProduct extends EditRecord
     {
         return $this->getResource()::getUrl('index');
     }
+
+    protected function mutateFormDataBeforeSave(array $data): array
+    {
+        if ($this->record->brand->status) {
+            return $data;
+        }
+        $data['status'] = false;
+        return $data;
+    }
 }

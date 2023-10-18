@@ -22,6 +22,7 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ToggleColumn;
 use Filament\Tables\Filters\SelectFilter;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Validation\Rule;
 
 class ProductResource extends Resource
@@ -78,6 +79,7 @@ class ProductResource extends Resource
                             ->required()
                             ->inline(false)
                             ->default(true)
+                            ->hint('pastikan brand yang dipilih aktif')
                             ->columnSpan(6),
                         RichEditor::make('description')->label('Deskripsi')
                             ->required()
@@ -112,7 +114,10 @@ class ProductResource extends Resource
                     ->dateTime('d F Y')
                     ->searchable()
                     ->sortable(),
-                ToggleColumn::make('status')->label('Status'),
+                ToggleColumn::make('status')->label('Status')
+                    ->disabled(function (Model $record) {
+                        return !$record->brand->status;
+                    }),
             ])
             ->filters([
                 SelectFilter::make('brand')->label('Brand')
