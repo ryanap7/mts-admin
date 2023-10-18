@@ -116,9 +116,17 @@
                         </p>
 
                         <!-- Button downloada catalog -->
-                        <a>
-                            <button class="btn-form">Downloads catalog</button>
-                        </a>
+                        <div class="wrapper-downloads">
+                            <div class="btn-download-file file" title="file">
+                                <img src="{{ asset('/assets/icons/file.svg') }}" alt="">
+                            </div>
+                            <div class="btn-download-file excel" title="excel">
+                                <img src="{{ asset('/assets/icons/excel.svg') }}" alt="">
+                            </div>
+                            <div class="btn-download-file pdf" title="pdf">
+                                <img src="{{ asset('/assets/icons/pdf.svg') }}" alt="">
+                            </div>
+                        </div>
                         <!-- Button downloada catalog -->
                     </div>
                 </div>
