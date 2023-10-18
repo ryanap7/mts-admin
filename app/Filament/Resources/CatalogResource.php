@@ -29,7 +29,7 @@ class CatalogResource extends Resource
 
     public static function getEloquentQuery(): Builder
     {
-        return parent::getEloquentQuery()->orderBy('name', 'asc');
+        return parent::getEloquentQuery()->whereNull('product_id')->orderBy('name', 'asc');
     }
 
     public static function form(Form $form): Form
