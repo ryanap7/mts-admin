@@ -21,6 +21,7 @@ use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ToggleColumn;
 use Filament\Tables\Filters\SelectFilter;
+use FilamentTiptapEditor\TiptapEditor;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Validation\Rule;
@@ -81,13 +82,21 @@ class ProductResource extends Resource
                             ->default(true)
                             ->hint('pastikan brand yang dipilih aktif')
                             ->columnSpan(6),
-                        RichEditor::make('description')->label('Deskripsi')
+                        TiptapEditor::make('description')->label('Deskripsi')
                             ->required()
-                            ->hint('pastikan ukuran lebar image tidak lebih dari 250px')
+                            ->tools([
+                                'heading', 'hr', 'bullet-list', 'ordered-list', 'checked-list',
+                                'bold', 'italic', 'lead', 'small',
+                                'link', 'media', 'align-left', 'align-justify'
+                            ])
                             ->columnSpanFull(),
-                        RichEditor::make('spesification')->label('Spesifikasi')
+                        TiptapEditor::make('spesification')->label('Spesifikasi')
                             ->required()
-                            ->hint('pastikan ukuran lebar image tidak lebih dari 250px')
+                            ->tools([
+                                'heading', 'hr', 'bullet-list', 'ordered-list', 'checked-list',
+                                'bold', 'italic', 'lead', 'small',
+                                'link', 'media', 'align-left', 'align-justify'
+                            ])
                             ->columnSpanFull(),
                     ])
                 ]),

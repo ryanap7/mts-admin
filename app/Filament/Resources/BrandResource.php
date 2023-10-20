@@ -19,6 +19,7 @@ use Filament\Resources\Table;
 use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ToggleColumn;
+use FilamentTiptapEditor\TiptapEditor;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -62,10 +63,14 @@ class BrandResource extends Resource
                         ->hint('pastikan ukuran image 400px x 200px')
                         ->rules(Rule::dimensions()->maxWidth(400)->maxHeight(200))
                         ->columnSpanFull(),
-                    RichEditor::make('description')
+                    TiptapEditor::make('description')
                         ->label('Deskripsi')
                         ->columnSpanFull()
-                        ->hint('pastikan ukuran lebar image tidak lebih dari 250px')
+                        ->tools([
+                            'heading', 'hr', 'bullet-list', 'ordered-list', 'checked-list',
+                            'bold', 'italic', 'lead', 'small',
+                            'link', 'media', 'align-left', 'align-justify'
+                        ])
                 ])
             ]);
     }
