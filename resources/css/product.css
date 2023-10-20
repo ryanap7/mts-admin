@@ -473,6 +473,7 @@
 
 .tab-item {
   display: none;
+  text-align: justify;
 }
 
 .tab-item.active {

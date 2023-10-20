@@ -1277,9 +1277,10 @@ html {
 
 .wrapper-form {
     position: relative;
-    width: 90vw;
+    width: 100vw;
     height: max-content;
     display: flex;
+    margin-bottom: 100px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -1307,7 +1308,7 @@ html {
     width: 50vw;
     margin-top: 10px;
     border-radius: 6px;
-    height: 100px;
+    height: 140px;
     padding: 14px;
     outline: none;
     background-color: rgb(241, 241, 241);
@@ -1568,6 +1569,17 @@ html {
     transition: 0.3s;
 }
 
+.wrapper-form {
+    margin-top: 100px;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.wrapper-form h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
 @media screen and (max-width: 750px) {
     .container-exp {
         margin-top: 80px;
@@ -1803,7 +1815,7 @@ section4-btn-section4mz4:hover {
     margin-left: auto;
     margin-right: auto;
     margin-top: 140px;
-    margin-bottom: 150px;
+    margin-bottom: 100px;
 }
 
 .section4-mz2-title {
