@@ -327,16 +327,30 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 </div>
             </div>
-            <div class="section4-bottom">
-                <h1>Still have a questions?</h1>
-                <p>We're sorry we couldn't provide you with the information you were looking for. Please contact us and we'll be happy to help.</p>
-                <a href="mailto:{{ $contact->email }}" target="_blank" style="text-decoration: none">
-                    <button class="hover:cursor-pointer"><img src="https://images-builder.vercel.app/img/vector_section4mz2.svg" alt="icon">
-                        <span>Contact us</span>
-                    </button>
-                </a>
-            </div>
+            
         </section>
+
+        <div class="legend">
+            <div></div>
+            <p>Form</p>
+            <div></div>
+        </div>
+
+        <div class="wrapper-form">
+            <h2>Contact Us</h2>
+            <form method="post" action="">
+                <div class="child-form">
+                    <input type="text" name="email" placeholder="Your email...">
+                </div>
+                <div class="child-form">
+                    <input type="text" name="username" placeholder="Username...">
+                </div>
+                <div class="child-form">
+                    <textarea type="text" name="message" placeholder="Enter your message"></textarea>
+                </div>
+                <button class="btn-form">Send now</button>
+            </form>
+        </div>
 
         <div class="footer-hdm">
             <div class="footer-right-hdm">
