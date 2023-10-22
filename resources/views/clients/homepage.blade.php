@@ -7,6 +7,7 @@
     <title>Mandiri Technology Sejahtera</title>
     <meta name="description" content="A System Integrator company established in September 2007 specializes in the development of IT network infrastructure and security systems.">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Facebook Meta Tags -->
     <meta property="og:url" content="https://mandiri-technology-sejahtera.vercel.app/">
@@ -43,6 +44,205 @@
 
         gtag('config', 'G-9ZD0FFFK8J');
     </script>
+
+    <style>
+        .is-invalid {
+            color: tomato;
+            display: block;
+            margin-top: 7px;
+        }
+
+        .d-none {
+            display: none;
+        }
+
+        .d-block {
+            display: block;
+        }
+
+        #message-success {
+            width: 500px;
+            background-color: #0069B3;
+            color: white;
+            height: 50px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        #circularG{
+            position:relative;
+            width:25px;
+            height:25px;
+            margin: auto;
+            display: inline-block;
+            margin: -9px 5px -9px -6px;
+        }
+
+        .circularG{
+            position:absolute;
+            background-color:rgb(255,255,255);
+            width:6px;
+            height:6px;
+            border-radius:4px;
+                -o-border-radius:4px;
+                -ms-border-radius:4px;
+                -webkit-border-radius:4px;
+                -moz-border-radius:4px;
+            animation-name:bounce_circularG;
+                -o-animation-name:bounce_circularG;
+                -ms-animation-name:bounce_circularG;
+                -webkit-animation-name:bounce_circularG;
+                -moz-animation-name:bounce_circularG;
+            animation-duration:1.1s;
+                -o-animation-duration:1.1s;
+                -ms-animation-duration:1.1s;
+                -webkit-animation-duration:1.1s;
+                -moz-animation-duration:1.1s;
+            animation-iteration-count:infinite;
+                -o-animation-iteration-count:infinite;
+                -ms-animation-iteration-count:infinite;
+                -webkit-animation-iteration-count:infinite;
+                -moz-animation-iteration-count:infinite;
+            animation-direction:normal;
+                -o-animation-direction:normal;
+                -ms-animation-direction:normal;
+                -webkit-animation-direction:normal;
+                -moz-animation-direction:normal;
+        }
+
+        #circularG_1{
+            left:0;
+            top:10px;
+            animation-delay:0.41s;
+                -o-animation-delay:0.41s;
+                -ms-animation-delay:0.41s;
+                -webkit-animation-delay:0.41s;
+                -moz-animation-delay:0.41s;
+        }
+
+        #circularG_2{
+            left:3px;
+            top:3px;
+            animation-delay:0.55s;
+                -o-animation-delay:0.55s;
+                -ms-animation-delay:0.55s;
+                -webkit-animation-delay:0.55s;
+                -moz-animation-delay:0.55s;
+        }
+
+        #circularG_3{
+            top:0;
+            left:10px;
+            animation-delay:0.69s;
+                -o-animation-delay:0.69s;
+                -ms-animation-delay:0.69s;
+                -webkit-animation-delay:0.69s;
+                -moz-animation-delay:0.69s;
+        }
+
+        #circularG_4{
+            right:3px;
+            top:3px;
+            animation-delay:0.83s;
+                -o-animation-delay:0.83s;
+                -ms-animation-delay:0.83s;
+                -webkit-animation-delay:0.83s;
+                -moz-animation-delay:0.83s;
+        }
+
+        #circularG_5{
+            right:0;
+            top:10px;
+            animation-delay:0.97s;
+                -o-animation-delay:0.97s;
+                -ms-animation-delay:0.97s;
+                -webkit-animation-delay:0.97s;
+                -moz-animation-delay:0.97s;
+        }
+
+        #circularG_6{
+            right:3px;
+            bottom:3px;
+            animation-delay:1.1s;
+                -o-animation-delay:1.1s;
+                -ms-animation-delay:1.1s;
+                -webkit-animation-delay:1.1s;
+                -moz-animation-delay:1.1s;
+        }
+
+        #circularG_7{
+            left:10px;
+            bottom:0;
+            animation-delay:1.24s;
+                -o-animation-delay:1.24s;
+                -ms-animation-delay:1.24s;
+                -webkit-animation-delay:1.24s;
+                -moz-animation-delay:1.24s;
+        }
+
+        #circularG_8{
+            left:3px;
+            bottom:3px;
+            animation-delay:1.38s;
+                -o-animation-delay:1.38s;
+                -ms-animation-delay:1.38s;
+                -webkit-animation-delay:1.38s;
+                -moz-animation-delay:1.38s;
+        }
+
+
+
+        @keyframes bounce_circularG{
+            0%{
+                transform:scale(1);
+            }
+
+            100%{
+                transform:scale(.3);
+            }
+        }
+
+        @-o-keyframes bounce_circularG{
+            0%{
+                -o-transform:scale(1);
+            }
+
+            100%{
+                -o-transform:scale(.3);
+            }
+        }
+
+        @-ms-keyframes bounce_circularG{
+            0%{
+                -ms-transform:scale(1);
+            }
+
+            100%{
+                -ms-transform:scale(.3);
+            }
+        }
+
+        @-webkit-keyframes bounce_circularG{
+            0%{
+                -webkit-transform:scale(1);
+            }
+
+            100%{
+                -webkit-transform:scale(.3);
+            }
+        }
+
+        @-moz-keyframes bounce_circularG{
+            0%{
+                -moz-transform:scale(1);
+            }
+
+            100%{
+                -moz-transform:scale(.3);
+            }
+        }
+    </style>
 
 </head>
 
@@ -199,6 +399,7 @@
             <div class="wrap-foto-mou">
 
                 {{-- Products --}}
+                @if ($products->count() != 0)
                 @foreach ($products as $product)
                 <div class="foto-mou">
                     <a href="{{ route('products.show', $product) }}">
@@ -209,6 +410,11 @@
                     </a>
                 </div>
                 @endforeach
+                @else
+                <div class="foto-mou" style="padding: 150px;">
+                    <p style="margin: auto">product is not available...</p>
+                </div>
+                @endif
                 
             </div>
             <a href="{{ route('brands') }}">
@@ -235,6 +441,7 @@
                 <div class="wrap-bottom-exp">
 
                     {{-- Best Seller --}}
+                    @if ($bestSeller->count() != 0)
                     @foreach ($bestSeller as $product)
                     <div class="card-exp">
                         <div class="card-top-exp">
@@ -250,6 +457,11 @@
                         </div>
                     </div>
                     @endforeach
+                    @else
+                    <div class="card-exp" style="padding: 20px;">
+                        <p style="margin: auto">product is not available...</p>
+                    </div>
+                    @endif
 
                 </div>
             </div>
@@ -327,16 +539,40 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 </div>
             </div>
-            <div class="section4-bottom">
-                <h1>Still have a questions?</h1>
-                <p>We're sorry we couldn't provide you with the information you were looking for. Please contact us and we'll be happy to help.</p>
-                <a href="mailto:{{ $contact->email }}" target="_blank" style="text-decoration: none">
-                    <button class="hover:cursor-pointer"><img src="https://images-builder.vercel.app/img/vector_section4mz2.svg" alt="icon">
-                        <span>Contact us</span>
-                    </button>
-                </a>
-            </div>
+            
         </section>
+
+        <div class="legend">
+            <div></div>
+            <p>Form</p>
+            <div></div>
+        </div>
+
+        <div class="wrapper-form">
+            <h2>Contact Us</h2>
+            <div id="message-success" class="d-none"></div>
+            <form method="post" action="{{ route('messages') }}" id="form-message">
+                @csrf
+                <div class="child-form">
+                    <input type="text" name="name" id="name" placeholder="Your name..." required><br>
+                    <small class="name"></small>
+                </div>
+                <div class="child-form">
+                    <input type="email" name="email" id="email" placeholder="Your email..." required><br>
+                    <small class="email"></small>
+                </div>
+                <div class="child-form">
+                    <input type="text" name="company" id="company" placeholder="Company..." required><br>
+                    <small class="company"></small>
+                </div>
+                <div class="child-form">
+                    <textarea type="text" name="message" id="message" placeholder="Enter your message" required></textarea><br>
+                    <small class="message"></small>
+                </div>
+                <button type="submit" class="btn-form">Send now</button>
+                {{-- <button type="submit" class="btn-form"><img src="{{ asset('/assets/spin/spin.gif') }}" alt="spin" class="spin"> Send now</button> --}}
+            </form>
+        </div>
 
         <div class="footer-hdm">
             <div class="footer-right-hdm">
@@ -535,6 +771,55 @@
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
             AOS.init();
+        </script>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script>
+            $('#form-message').on('submit', function(e) {
+                e.preventDefault(e)
+                const spin = `<div id="circularG">
+                                <div id="circularG_1" class="circularG"></div>
+                                <div id="circularG_2" class="circularG"></div>
+                                <div id="circularG_3" class="circularG"></div>
+                                <div id="circularG_4" class="circularG"></div>
+                                <div id="circularG_5" class="circularG"></div>
+                                <div id="circularG_6" class="circularG"></div>
+                                <div id="circularG_7" class="circularG"></div>
+                                <div id="circularG_8" class="circularG"></div>
+                            </div> Send now`;
+                $('.btn-form').html(spin)
+
+                const url = this.getAttribute('action')
+                $.ajax({
+                    method: 'POST',
+                    url,
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    data: new FormData(this),
+                    contentType: false,
+                    cache: false,
+                    processData:false,
+                    success:function(res){
+                        if(res.success){
+                            $('.btn-form').html('Send now')
+                            $('#message-success').addClass('d-block').text(res.message)
+                            $('#name').val('')
+                            $('#email').val('')
+                            $('#company').val('')
+                            $('#message').val('')
+                        }else{
+                            let errors = res.errors;
+                                $.each(errors, function(prefix, val){
+                                    $('.' + prefix).addClass('is-invalid').text(val[0]);
+                                })
+                        }
+                    },
+                    error:function(er){
+                        console.log('tidak ok bgt');
+                    }
+                })
+            })
         </script>
 </body>
 

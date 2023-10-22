@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DownloadController;
 use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\SendEmailController;
 
 // Public
 Route::view('/detail-product', 'clients.detail-product');
@@ -24,3 +25,7 @@ Route::get('/categories/{brand}', [CategoryController::class, 'brandCategory'])-
 Route::get('/products', [ProductController::class, 'index'])->name('products.index');
 Route::get('/products/{product}', [ProductController::class, 'show'])->name('products.show');
 Route::get('/categories/products/{category}', [ProductController::class, 'productCategory'])->name('products.category');
+
+
+// Send Email
+Route::post('/messages', [SendEmailController::class, 'sendMessage'])->name('messages');

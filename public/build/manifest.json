@@ -1,7 +1,7 @@
 {
-  "resources/css/product.css": {
-    "file": "assets/product.a970606f.css",
-    "src": "resources/css/product.css",
+  "resources/css/brandCategory.css": {
+    "file": "assets/brandCategory.410151e3.css",
+    "src": "resources/css/brandCategory.css",
     "isEntry": true
   },
   "resources/css/navbar.css": {
@@ -14,18 +14,18 @@
     "src": "resources/css/footer.css",
     "isEntry": true
   },
+  "resources/css/product.css": {
+    "file": "assets/product.24968f3e.css",
+    "src": "resources/css/product.css",
+    "isEntry": true
+  },
   "resources/css/homepage.css": {
-    "file": "assets/homepage.86660ee9.css",
+    "file": "assets/homepage.e380873f.css",
     "src": "resources/css/homepage.css",
     "isEntry": true
   },
-  "resources/css/brandCategory.css": {
-    "file": "assets/brandCategory.410151e3.css",
-    "src": "resources/css/brandCategory.css",
-    "isEntry": true
-  },
   "resources/css/filament.css": {
-    "file": "assets/filament.35075cfe.css",
+    "file": "assets/filament.21e6380e.css",
     "src": "resources/css/filament.css",
     "isEntry": true
   }
