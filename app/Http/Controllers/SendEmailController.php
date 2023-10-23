@@ -26,8 +26,7 @@ class SendEmailController extends Controller
             ]);
         }
 
-        // Mail::to('sales@mandiri-technology-sejahtera.com')->send(new SendEmail());
-        Mail::to('muhammadmuminaziz@gmail.com')->send(new SendEmail($data));
+        Mail::to('sales@mandiri-technology-sejahtera.com')->send(new SendEmail($data));
 
         return response()->json([
             'success' => true,

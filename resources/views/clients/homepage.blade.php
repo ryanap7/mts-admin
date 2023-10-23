@@ -589,7 +589,7 @@
 
         <div class="wrapper-form">
             <h2>Contact Us</h2>
-            <div id="message-success" class="d-block">
+            <div id="message-success">
                 Sukses mengirim pesan anda, terima kasih!
                 <div class="btn-close-message" id="btn-close-message">
                     <img src="{{ asset('/') }}assets/icons/close.svg" alt="icon" id="btn-close2">
@@ -827,6 +827,7 @@
         </script>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
         <script>
+            $('#message-success').hide()
             $('#form-message').on('submit', function(e) {
                 e.preventDefault(e)
                 const spin = `<div id="circularG">
@@ -855,7 +856,7 @@
                     success:function(res){
                         if(res.success){
                             $('.btn-form').html('Send now')
-                            $('#message-success').addClass('d-block').text(res.message)
+                            $('#message-success').show()
                             $('#name').val('')
                             $('#email').val('')
                             $('#company').val('')
