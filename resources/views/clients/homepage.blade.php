@@ -58,13 +58,47 @@
 
         .d-block {
             display: block;
+        }   
+
+        .btn-close-message {
+            position: relative;
+            background-color: white;
+            margin-left: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            overflow: hidden;
+            border-radius: 9999px;
+            padding: 2px;
+            cursor: pointer;
+        }
+
+        .btn-close-message img {
+            width: 80%;
+        }
+
+        .btn-close-message:hover {
+            transition: 0.2s;
+            filter: brightness(90%);
+        }
+
+        .btn-close-message:active {
+            transition: 0.2s;
+            transform: scale(0.98);
         }
 
         #message-success {
-            width: 500px;
+            width: max-content;
             background-color: #0069B3;
             color: white;
             height: 50px;
+            padding: 0 20px;
+            display: flex;
+            position: relative;
+            align-items: center;
+            justify-content: space-between;
             border-radius: 10px;
             text-align: center;
             margin-bottom: 15px;
@@ -411,8 +445,11 @@
                 </div>
                 @endforeach
                 @else
-                <div class="foto-mou" style="padding: 150px;">
-                    <p style="margin: auto">product is not available...</p>
+                <div class="wrapper-not-product">
+                    <p style="margin: auto;display: flex;align-items: center;justify-content: center;">
+                        <img src="{{ asset('/') }}assets/icons/prod.png" style="margin-right: 20px;width: 60px;height: 60px;" alt="icon product">
+                        product is not available...
+                    </p>
                 </div>
                 @endif
                 
@@ -458,11 +495,13 @@
                     </div>
                     @endforeach
                     @else
-                    <div class="card-exp" style="padding: 20px;">
-                        <p style="margin: auto">product is not available...</p>
+                    <div class="wrapper-not-product">
+                        <p style="margin: auto;display: flex;align-items: center;justify-content: center;">
+                            <img src="{{ asset('/') }}assets/icons/prod.png" style="margin-right: 20px;width: 60px;height: 60px;" alt="icon product">
+                            product is not available...
+                        </p>
                     </div>
                     @endif
-
                 </div>
             </div>
         </div>
@@ -550,7 +589,12 @@
 
         <div class="wrapper-form">
             <h2>Contact Us</h2>
-            <div id="message-success" class="d-none"></div>
+            <div id="message-success" class="d-block">
+                Sukses mengirim pesan anda, terima kasih!
+                <div class="btn-close-message" id="btn-close-message">
+                    <img src="{{ asset('/') }}assets/icons/close.svg" alt="icon" id="btn-close2">
+                </div>
+            </div>
             <form method="post" action="{{ route('messages') }}" id="form-message">
                 @csrf
                 <div class="child-form">
@@ -614,6 +658,15 @@
                 <img src="{{ asset('/') }}assets/images/wa.png" alt="wa">
             </div>
         </a>
+
+        <script>
+            const btnMessage = document.getElementById('btn-close2');
+            const messageSuccess = document.getElementById('message-success');
+            btnMessage.addEventListener('click', () => {
+                window.alert('ok')
+                messageSuccess.style.display = 'none'
+            });
+        </script>
 
 
         <script>
@@ -772,7 +825,6 @@
         <script>
             AOS.init();
         </script>
-
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
         <script>
             $('#form-message').on('submit', function(e) {

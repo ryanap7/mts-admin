@@ -101,6 +101,16 @@ html {
     }
 }
 
+.wrapper-not-product {
+    width: 90vw;
+    height: 300px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(243, 243, 243);
+}
+
 @keyframes blink {
     0%,
     100% {
