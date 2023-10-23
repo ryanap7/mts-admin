@@ -862,6 +862,7 @@
                             $('#company').val('')
                             $('#message').val('')
                         }else{
+                            $('.btn-form').html('Send now')
                             let errors = res.errors;
                                 $.each(errors, function(prefix, val){
                                     $('.' + prefix).addClass('is-invalid').text(val[0]);
@@ -869,7 +870,7 @@
                         }
                     },
                     error:function(er){
-                        console.log('tidak ok bgt');
+                        $('.btn-form').html('Send now')
                     }
                 })
             })
