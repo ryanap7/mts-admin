@@ -11,9 +11,9 @@ use App\Http\Controllers\SendEmailController;
 // Public
 Route::view('/detail-product', 'clients.detail-product');
 
-Route::redirect('auth', 'admin')->name('login');
+Route::redirect('auth', 'adminconsole')->name('login');
 Route::redirect('homepage', '/');
-Route::get('admin/catalogs/{catalog}/download', [DownloadController::class, 'downloadCatalog'])->name('download.catalog');
+Route::get('adminconsole/catalogs/{catalog}/download', [DownloadController::class, 'downloadCatalog'])->name('download.catalog');
 
 // Public
 Route::get('/', HomepageController::class)->name('homepage');
