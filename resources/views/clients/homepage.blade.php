@@ -478,19 +478,21 @@
                     {{-- Best Seller --}}
                     @if ($bestSeller->count() != 0)
                     @foreach ($bestSeller as $product)
-                    <div class="card-exp">
-                        <div class="card-top-exp">
-                            <img loading="lazy" src="{{ asset('/storage/' . $product->image ) }}" alt="card-image">
-                        </div>
-                        <div class="card-bottom-exp">
-                            <div class="title-bottom-exp">
-                                <h4>{{ $product->name }}</h4>
-                                <p>{{ $product->price }}</p>
+                    <a href="{{ route('products.show', $product) }}">
+                        <div class="card-exp">
+                            <div class="card-top-exp">
+                                <img loading="lazy" src="{{ asset('/storage/' . $product->image ) }}" alt="card-image">
                             </div>
-                            <small>{{ $product->brand->name ?? '' }}</small>
-                            </p>
+                            <div class="card-bottom-exp">
+                                <div class="title-bottom-exp">
+                                    <h4>{{ $product->name }}</h4>
+                                    <p>{{ $product->price }}</p>
+                                </div>
+                                <small>{{ $product->brand->name ?? '' }}</small>
+                                </p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                     @endforeach
                     @else
                     <div class="wrapper-not-product">
