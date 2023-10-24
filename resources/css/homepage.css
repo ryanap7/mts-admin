@@ -323,11 +323,11 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    width: 558px;
+    width: 560px;
     overflow: hidden;
     border-radius: 30px;
     border: 1px solid rgb(209, 209, 209);
-    height: 529px;
+    height: 530px;
 }
 
 .card-section5-left-mz1 img {
@@ -666,9 +666,13 @@ html {
 }
 
 .container-mou .title-mou {
-    font-size: 42px;
+    font-size: 40px;
     font-weight: bold;
     margin-bottom: 16px;
+}
+
+.teks-mou {
+    font-size: 16px;
 }
 
 .wrap-foto-mou {
@@ -690,15 +694,8 @@ html {
     border-radius: 12px;
     margin: 10px;
     transition: 0.4s;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
     background-color: white;
-    box-shadow: 2px 2px 1.6px rgba(0, 0, 0, 0.002),
-        4.5px 4.5px 3.6px rgba(0, 0, 0, 0.003),
-        7.9px 7.9px 6.3px rgba(0, 0, 0, 0.004),
-        12.5px 12.5px 10px rgba(0, 0, 0, 0.005),
-        19.3px 19.3px 15.5px rgba(0, 0, 0, 0.006),
-        30.1px 30.1px 24.1px rgba(0, 0, 0, 0.007),
-        50px 50px 40px rgba(0, 0, 0, 0.008),
-        100px 100px 80px rgba(0, 0, 0, 0.01);
     overflow: hidden;
     cursor: pointer;
 }
@@ -713,7 +710,6 @@ html {
 }
 
 .wrap-foto-mou .foto-mou:hover img {
-    filter: brightness(80%);
     transition: 0.4s;
     transform: scale(1.1);
 }
@@ -737,6 +733,7 @@ html {
     }
 
     .teks-mou {
+        font-size: 16px; 
         width: 85vw;
         margin-left: auto;
         margin-right: auto;
