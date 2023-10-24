@@ -1496,6 +1496,18 @@ html {
     justify-content: space-between;
 }
 
+.wrap-bottom-exp a {
+    text-decoration: none;
+}
+
+.wrap-bottom-exp h4 {
+    color: black;
+}
+
+.wrap-bottom-exp p {
+    color: rgb(92, 92, 92);
+}
+
 .wrap-bottom-exp::-webkit-scrollbar {
     display: none;
 }
