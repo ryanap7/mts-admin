@@ -685,7 +685,7 @@ html {
     position: relative;
     overflow: hidden;
     width: 22%;
-    background-size: cover;
+    background-size: contain;
     height: 260px;
     border-radius: 12px;
     margin: 10px;
@@ -704,7 +704,7 @@ html {
 }
 
 .wrap-foto-mou .foto-mou img {
-    object-fit: cover;
+    object-fit: contain;
     width: 100%;
     position: relative;
     z-index: 2222;
@@ -748,7 +748,7 @@ html {
 
     .wrap-foto-mou .foto-mou {
         width: 82%;
-        background-size: cover;
+        background-size: contain;
         height: 260px;
         border-radius: 12px;
         margin: 10px;
