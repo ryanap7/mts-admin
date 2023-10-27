@@ -438,7 +438,7 @@
                 <div class="foto-mou">
                     <a href="{{ route('products.show', $product) }}">
                         <!-- <img loading="lazy" src="{{ asset('/storage/' . $product->image) }}" alt="image" /> -->
-                        <img loading="lazy" src="{{ asset('/') }}assets/images/produk.jpg" alt="image" />
+                        <img loading="lazy" src="{{ asset('/storage/' . $product->image ) }}" alt="image" />
                     </a>
                 </div>
                 @endforeach
@@ -481,7 +481,7 @@
                     <a href="{{ route('products.show', $product) }}">
                         <div class="card-exp">
                             <div class="card-top-exp">
-                                <img loading="lazy" src="{{ asset('/') }}assets/images/produk.jpg" alt="card-image">
+                                <img loading="lazy" src="{{ asset('/storage/' . $product->image ) }}" alt="card-image">
                             </div>
                             <div class="card-bottom-exp">
                                 <div class="title-bottom-exp">
