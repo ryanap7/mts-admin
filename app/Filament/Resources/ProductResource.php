@@ -125,7 +125,10 @@ class ProductResource extends Resource
                     ->sortable(),
                 ToggleColumn::make('status')->label('Status')
                     ->disabled(function (Model $record) {
-                        return !$record->brand->status;
+                        if ($record->brand != null) {
+                            return !$record->brand->status;
+                        }
+                        return false;
                     }),
             ])
             ->filters([
