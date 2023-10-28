@@ -550,32 +550,32 @@
             <p class="section4-mz2-paragh">We tried to answer most common questions, if you have any additional, please get in touch with our friendly team</p>
             <div>
                 <button class="accordion-mz2">
-                    <span>01. What are properties in Figma?</span>
+                    <span>01. What is the Best Solution that MTS offers us?</span>
                     <img src="https://images-builder.vercel.app/img/add_section4mz2.svg" alt="icon">
                 </button>
                 <div class="panel-mz2">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>We can provide solutions such us : Security, Networking, Endpoint, FTTH, Server & Storage Solution, but back again based on customer needs, we will help customer needs for Sizing the Product.</p>
                 </div>
                 <button class="accordion-mz2">
-                    <span>02. How Whitespace UI&nbsp;kit and Design&nbsp;System can help me?</span>
+                    <span>02. How is the Services Provided that MTS offer us ?</span>
                     <img src="https://images-builder.vercel.app/img/add_section4mz2.svg" alt="icon">
                 </button>
                 <div class="panel-mz2">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>We can provide Services such us : Implementation, Online, Onsite, Email support for 8 Hours x 5 Days and until 24 Hours x 7 Days.</p>
                 </div>
                 <button class="accordion-mz2">
-                    <span>03. What is your return policy?</span>
+                    <span>03. How can i contact Customer Support ?</span>
                     <img src="https://images-builder.vercel.app/img/add_section4mz2.svg" alt="icon">
                 </button>
                 <div class="panel-mz2">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>Customer can Contact us directly with the Person In Charge, that Customer Purchased the Product via Phone, Whatsapp & Email.</p>
                 </div>
                 <button class="accordion-mz2">
-                    <span>04. How can I contact customer support?</span>
+                    <span>04. Why Customers choose MTS for the Solution Offered ?</span>
                     <img src="https://images-builder.vercel.app/img/add_section4mz2.svg" alt="icon">
                 </button>
                 <div class="panel-mz2">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>Because we not only Sell Hardware/Software, but we also prioritize After Sales Support to solve problems with the Hardware/Software purchased and also establish good relationships with customers.</p>
                 </div>
             </div>
             
