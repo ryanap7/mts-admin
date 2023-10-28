@@ -128,7 +128,7 @@ class ProductResource extends Resource
                         if ($record->brand != null) {
                             return !$record->brand->status;
                         }
-                        return false;
+                        return true;
                     }),
             ])
             ->filters([
