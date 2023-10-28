@@ -62,15 +62,9 @@
     justify-content: center;
 }
 
-.group-list-hdm:nth-child(2),
-.group-list-hdm:nth-child(3) {
-    width: 38%;
+.group-list-hdm {
+    width: 33%;
     color: white;
-}
-
-.group-list-hdm:nth-child(1) {
-    color: white;
-    width: 22%;
 }
 
 .group-list-hdm img {
@@ -141,13 +135,7 @@
         margin-top: 30px;
     }
 
-    .group-list-hdm:nth-child(2),
-    .group-list-hdm:nth-child(3) {
-        width: 100%;
-        color: white;
-    }
-
-    .group-list-hdm:nth-child(1) {
+    .group-list-hdm {
         color: white;
         width: 100%;
     }

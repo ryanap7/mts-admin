@@ -157,7 +157,7 @@
                                         alt="card-image"/>
                                     @else
                                     <img
-                                        src="{{ asset('/') }}assets/images/nike2.png"
+                                        src="{{ asset('/') }}assets/images/kategory.jpg"
                                         alt="card-image"
                                     />  
                                     @endif
