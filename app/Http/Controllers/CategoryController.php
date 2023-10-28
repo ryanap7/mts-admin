@@ -15,7 +15,8 @@ class CategoryController extends Controller
     public function index()
     {
         $contact = Contact::first();
-        $categories = Category::all();
+        $brands = Brand::whereStatus(true)->get();
+        $categories = Category::whereBelongsTo($brands)->get();
         return view('clients.category', compact('contact', 'categories'));
     }
 

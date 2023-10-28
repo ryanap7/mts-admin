@@ -11,12 +11,13 @@ class SendEmailController extends Controller
 {
     public function sendMessage(Request $request)
     {
-        $data = $request->only(['name', 'email', 'company', 'message']);
+        $data = $request->only(['name', 'email', 'company', 'message', 'g-recaptcha-response']);
         $validator = Validator::make($data, [
             'name' => 'required',
             'email' => 'required|email',
             'company' => 'required',
-            'message' => 'required'
+            'message' => 'required',
+            'g-recaptcha-response' => 'required|captcha'
         ]);
 
         if ($validator->fails()) {

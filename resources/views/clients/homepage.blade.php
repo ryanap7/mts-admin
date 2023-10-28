@@ -612,6 +612,11 @@
                     <textarea type="text" name="message" id="message" placeholder="Enter your message" required></textarea><br>
                     <small class="message"></small>
                 </div>
+                <div class="child-form">
+                    {!! NoCaptcha::renderJs() !!}
+                    {!! NoCaptcha::display() !!}
+                    <small class="g-recaptcha-response"></small>
+                </div>
                 <button type="submit" class="btn-form">Send now</button>
                 {{-- <button type="submit" class="btn-form"><img src="{{ asset('/assets/spin/spin.gif') }}" alt="spin" class="spin"> Send now</button> --}}
             </form>
