@@ -110,7 +110,8 @@
             </div>
 
             <div class="conatiner-section3-section3mz4">
-                <div class="section3-left-section3mz4">
+                <img src="{{ asset('/') }}assets/images/Allbrand.png" alt="bannerBrand">
+                <!-- <div class="section3-left-section3mz4">
                     <a href="#brands">
                         <button class="btn-hiring-section3mz4">
                             <span>CHECK</span>
@@ -129,12 +130,12 @@
                         Herox helps businesses in Africa get paid by anyone,
                         anywhere in the world securedly.
                     </p>
-                </div>
-                <div class="section3-right-section3mz4">
+                </div> -->
+                <!-- <div class="section3-right-section3mz4">
                     <div class="image-section3-section3mz4">
                         <img src="{{ asset('/') }}assets/images/kamera.jpeg" alt="image" />
                     </div>
-                </div>
+                </div> -->
             </div>
 
             <div class="container-exp" id="brands">

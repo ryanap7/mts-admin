@@ -954,9 +954,18 @@ html {
 .conatiner-section3-section3mz4 {
     padding: 100px 70px;
     display: flex;
+    height: 440px;
     margin-top: 50px;
+    background-size: contain;
     align-items: center;
     background: var(--primary);
+    overflow: hidden;
+}
+
+.conatiner-section3-section3mz4 img {
+    position: relative;
+    left: -20px;
+    bottom: 10px;
 }
 
 .btn-hiring-section3mz4 {
