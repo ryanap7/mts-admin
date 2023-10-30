@@ -60,8 +60,8 @@ class BrandResource extends Resource
                         ->directory('img/brands')
                         ->image()
                         ->maxSize(2048)
-                        ->hint('pastikan ukuran image 400px x 200px')
-                        ->rules(Rule::dimensions()->maxWidth(400)->maxHeight(200))
+                        ->hint('pastikan ukuran image 260px x 200px')
+                        ->rules(Rule::dimensions()->maxWidth(260)->maxHeight(200))
                         ->columnSpanFull(),
                     TiptapEditor::make('description')
                         ->label('Deskripsi')

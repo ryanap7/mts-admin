@@ -74,8 +74,8 @@ class ProductResource extends Resource
                             ->maxSize(2048)
                             ->directory('img/products')
                             ->columnSpan(6)
-                            ->hint('pastikan ukuran image 600px x 450px')
-                            ->rules(Rule::dimensions()->maxWidth(600)->maxHeight(450)),
+                            ->hint('pastikan ukuran image 280px x 260px')
+                            ->rules(Rule::dimensions()->maxWidth(280)->maxHeight(260)),
                         Toggle::make('status')->label('Status')
                             ->required()
                             ->inline(false)
