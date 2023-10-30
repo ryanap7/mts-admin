@@ -110,18 +110,19 @@
             </div>
 
             <div class="conatiner-section3-section3mz4">
-                <img src="{{ asset('/') }}assets/images/Allbrand.png" alt="bannerBrand">
+                <img class="bannerrr" src="{{ asset('/') }}assets/images/bannerAll.png" alt="bannerBrand">
+                <a href="#brands">
+                    <button class="btn-hiring-section3mz4">
+                        <span>CHECK</span>
+                        All Brands
+                        <img
+                            class="img2"
+                            src="https://images-builder.vercel.app/img/arrow-left_section3mz4.svg"
+                            alt="arrow-left"
+                        />
+                    </button>
+                </a>
                 <!-- <div class="section3-left-section3mz4">
-                    <a href="#brands">
-                        <button class="btn-hiring-section3mz4">
-                            <span>CHECK</span>
-                            All Brands
-                            <img
-                                src="https://images-builder.vercel.app/img/arrow-left_section3mz4.svg"
-                                alt="arrow-left"
-                            />
-                        </button>
-                    </a>
                     <h1 class="section3-title-section3mz4">
                         Creator of today's great and
                         <span id="text-animation"></span> products
