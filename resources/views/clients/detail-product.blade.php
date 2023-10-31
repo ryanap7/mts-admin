@@ -212,6 +212,20 @@
         <script src="{{ asset('/') }}assets/js/tab.js"></script>
         <script src="{{ asset('/') }}assets/js/navbar.js"></script>
         <script>
+            let listItems = document.querySelectorAll('li'); // Mengambil semua elemen <li>
+
+            listItems.forEach(function (li) {
+                var pTag = li.querySelector('p'); // Mengambil elemen <p> dalam <li>
+
+                if (pTag) {
+                    var pText = pTag.textContent; // Mengambil teks dari elemen <p>
+                    li.textContent = '\u2022 ' + pText; // Menambahkan simbol titik (bullet point) dan teks ke elemen <li>
+                } else {
+                    console.log("Tidak ada elemen <p> dalam elemen <li> ini");
+                }
+            });
+        </script>
+        <script>
             // Temukan elemen gambar dengan ID "logo"
             const logoImage = document.getElementById('logo');
 

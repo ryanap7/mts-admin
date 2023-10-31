@@ -468,7 +468,6 @@
 
 .tab-content h2 {
   font-size: 32px;
-  margin: 40px;
 }
 
 .tab-content p {
@@ -479,11 +478,14 @@
 }
 
 .tab-content li {
-  list-style: circle;
+  font-size: 14px;
+  color: rgb(46, 46, 46);
+  margin: 12px 0;
 }
 
 .tab-content ul {
   list-style: circle;
+  list-style-type: square;
 }
 
 .tab-item {
