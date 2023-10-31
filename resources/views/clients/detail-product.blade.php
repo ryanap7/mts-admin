@@ -105,7 +105,7 @@
             <div class="wrapper-detail-product">
                 <div class="child-detail-product">
                     <div class="child-detail-product-left">
-                        <img loading="lazy" src="{{ asset('/') }}assets/images/produk.jpg" alt="image-product">
+                        <img loading="lazy" src="{{ asset('/storage/' . $product->image ) }}" alt="image-product">
                     </div>
                     <div class="child-detail-product-right">
                         <h4>Detail Product</h3>
