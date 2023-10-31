@@ -124,7 +124,7 @@
                                 <span class="download-text">Download the Product click below</span>
                                 <br>
                                 <br>
-                                <a href="/">
+                                <a href="{{ route('download.catalog', $catalog) }}">
                                     <div class="btn-download-file file" title="file">
                                         <img src="{{ asset('/assets/icons/file.svg') }}" alt="">
                                     </div>
