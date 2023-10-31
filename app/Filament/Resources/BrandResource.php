@@ -3,14 +3,10 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\BrandResource\Pages;
-use App\Filament\Resources\BrandResource\RelationManagers;
 use App\Models\Brand;
 use App\Models\Product;
-use Faker\Provider\ar_EG\Text;
-use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Grid;
-use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Resources\Form;
@@ -18,11 +14,9 @@ use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Columns\ToggleColumn;
 use FilamentTiptapEditor\TiptapEditor;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Validation\Rule;
 
 class BrandResource extends Resource
@@ -69,7 +63,7 @@ class BrandResource extends Resource
                         ->tools([
                             'heading', 'hr', 'bullet-list', 'ordered-list', 'checked-list',
                             'bold', 'italic', 'lead', 'small',
-                            'link', 'media', 'align-left', 'align-justify'
+                            'link', 'media', 'align-left', 'align-justify', 'align-right', 'align-center'
                         ])
                 ])
             ]);

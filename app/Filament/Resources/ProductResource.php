@@ -10,7 +10,6 @@ use Closure;
 use Filament\Forms\Components\Card;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Grid;
-use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
@@ -87,7 +86,7 @@ class ProductResource extends Resource
                             ->tools([
                                 'heading', 'hr', 'bullet-list', 'ordered-list', 'checked-list',
                                 'bold', 'italic', 'lead', 'small',
-                                'link', 'media', 'align-left', 'align-justify'
+                                'link', 'media', 'align-left', 'align-justify', 'align-right', 'align-center'
                             ])
                             ->columnSpanFull(),
                         TiptapEditor::make('spesification')->label('Spesifikasi')
@@ -95,9 +94,9 @@ class ProductResource extends Resource
                             ->tools([
                                 'heading', 'hr', 'bullet-list', 'ordered-list', 'checked-list',
                                 'bold', 'italic', 'lead', 'small',
-                                'link', 'media', 'align-left', 'align-justify'
+                                'link', 'media', 'align-left', 'align-justify', 'align-right', 'align-center'
                             ])
-                            ->columnSpanFull(),
+                            ->columnSpanFull()
                     ])
                 ]),
             ]);
