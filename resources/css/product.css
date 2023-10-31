@@ -69,6 +69,12 @@
   transform: scale(0.94);
 }
 
+.download-text {
+  font-size: 12px;
+  color: rgb(87, 87, 87);
+  position: relative;
+}
+
 .info-list-products {
   width: 100%;
   display: flex;
@@ -462,13 +468,24 @@
 
 .tab-content h2 {
   font-size: 32px;
-  margin-bottom: 40px;
 }
 
 .tab-content p {
   font-size: 14px;
   line-height: 2.2em;
+  margin-top: 20px;
   color: rgb(121, 121, 121);
+}
+
+.tab-content li {
+  font-size: 14px;
+  color: rgb(46, 46, 46);
+  margin: 12px 0;
+}
+
+.tab-content ul {
+  list-style: circle;
+  list-style-type: square;
 }
 
 .tab-item {

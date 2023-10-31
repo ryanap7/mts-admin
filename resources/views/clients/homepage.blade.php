@@ -435,12 +435,12 @@
                 {{-- Products --}}
                 @if ($products->count() != 0)
                 @foreach ($products as $product)
-                <div class="foto-mou">
-                    <a href="{{ route('products.show', $product) }}">
+                <a href="{{ route('products.show', $product) }}">
+                    <div class="foto-mou">
                         <!-- <img loading="lazy" src="{{ asset('/storage/' . $product->image) }}" alt="image" /> -->
                         <img loading="lazy" src="{{ asset('/storage/' . $product->image) }}" alt="image" />
-                    </a>
-                </div>
+                    </div>
+                </a>
                 @endforeach
                 @else
                 <div class="wrapper-not-product">
@@ -510,7 +510,7 @@
             <h1>OUR CUSTOMERS</h1>
             <div class="slider-container">
                 <div class="slider">
-                    <img class="unOurCus" id="diskominfo" src="{{ asset('/') }}assets/images/diskominfo.webp" alt="sponsor" />
+                    <img class="ourCus" id="diskominfo" src="{{ asset('/') }}assets/images/Our Cus Kominfo Boyolali.png" alt="sponsor" />
                     <img class="ourCus" id="trisakti" src="{{ asset('/') }}assets/images/Our Cus Trisakti.png" alt="sponsor" />
                     <img class="ourCus" id="mensa" src="{{ asset('/') }}assets/images/Our Cus Mensa.png" alt="sponsor" />
                     <img class="ourCus" id="landison" src="{{ asset('/') }}assets/images/Our Cus Landson.png" alt="sponsor" />
@@ -521,26 +521,26 @@
                     <img class="ourCus" id="succor" src="{{ asset('/') }}assets/images/Our Cus Sukor.png" alt="sponsor" />
                     <img class="ourCus" id="planetBan" src="{{ asset('/') }}assets/images/Our Cus Planetban.png" alt="sponsor" />
                     <img class="ourCus" id="smr" src="{{ asset('/') }}assets/images/Our Cus SMR.png" alt="sponsor" />
-                    <img class="unOurCus" id="rukun" src="{{ asset('/') }}assets/images/rukun.webp" alt="sponsor" />
-                    <img class="unOurCus" id="gmf" src="{{ asset('/') }}assets/images/gmf.webp" alt="sponsor" />
-                    <img class="unOurCus" id="diskominfo" src="{{ asset('/') }}assets/images/diskominfo.webp" alt="sponsor" />
+                    <img class="ourCus" id="rukun" src="{{ asset('/') }}assets/images/Our Cus Rukun.png" alt="sponsor" />
+                    <img class="ourCus" id="gmf" src="{{ asset('/') }}assets/images/Our Cus GMF.png" alt="sponsor" />
+                    <img class="ourCus" id="diskominfo" src="{{ asset('/') }}assets/images/Our Cus Kominfo Boyolali.png" alt="sponsor" />
                     <img class="ourCus" id="trisakti" src="{{ asset('/') }}assets/images/Our Cus Trisakti.png" alt="sponsor" />
                     <img class="ourCus" id="mensa" src="{{ asset('/') }}assets/images/Our Cus Mensa.png" alt="sponsor" />
                     <img class="ourCus" id="landison" src="{{ asset('/') }}assets/images/Our Cus Landson.png" alt="sponsor" />
                     <img class="ourCus" id="otto" src="{{ asset('/') }}assets/images/Our Cus Otto.png" alt="sponsor" />
                     <img class="ourCus" id="andini" src="{{ asset('/') }}assets/images/Our Cus Andini.png" alt="sponsor" />
-                    <img class="unOurCus" id="akr" src="{{ asset('/') }}assets/images/Our Cus AKR.png" alt="sponsor" />
+                    <img class="ourCus" id="akr" src="{{ asset('/') }}assets/images/Our Cus AKR.png" alt="sponsor" />
                     <img class="ourCus" id="indocapital" src="{{ asset('/') }}assets/images/Our Cus Indo Capital.png" alt="sponsor" />
                     <img class="ourCus" id="ubm" src="{{ asset('/') }}assets/images/Our Cus UBM.png" alt="sponsor" />
                     <img class="ourCus" id="cas" src="{{ asset('/') }}assets/images/Our Cus CAS.png" alt="sponsor" />
                     <img class="ourCus" id="succor" src="{{ asset('/') }}assets/images/Our Cus Sukor.png" alt="sponsor" />
                     <img class="ourCus" id="planetBan" src="{{ asset('/') }}assets/images/Our Cus Planetban.png" alt="sponsor" />
                     <img class="ourCus" id="smr" src="{{ asset('/') }}assets/images/Our Cus SMR.png" alt="sponsor" />
-                    <img class="unOurCus" id="jhl" src="{{ asset('/') }}assets/images/jhl.webp" alt="sponsor" />
+                    <img class="ourCus" id="jhl" src="{{ asset('/') }}assets/images/Our Cus jhl solitaire.png" alt="sponsor" />
                     <img class="ourCus" id="ubm" src="{{ asset('/') }}assets/images/Our Cus UBM.png" alt="sponsor" />
-                    <img class="unOurCus" id="rukun" src="{{ asset('/') }}assets/images/rukun.webp" alt="sponsor" />
-                    <img class="unOurCus" id="gmf" src="{{ asset('/') }}assets/images/gmf.webp" alt="sponsor" />
-                    <img class="unOurCus" id="tcl" src="{{ asset('/') }}assets/images/tcl.webp" alt="sponsor" />
+                    <img class="ourCus" id="rukun" src="{{ asset('/') }}assets/images/Our Cus Rukun.png" alt="sponsor" />
+                    <img class="ourCus" id="gmf" src="{{ asset('/') }}assets/images/Our Cus GMF.png" alt="sponsor" />
+                    <img class="ourCus" id="tcl" src="{{ asset('/') }}assets/images/Our Cus TCL.png" alt="sponsor" />
                 </div>
             </div>
         </section>

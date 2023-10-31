@@ -114,7 +114,37 @@
                 </div>
             </div>
 
-            <div class="container-section4-section4mz4">
+            <div class="conatiner-section3-section3mz4">
+                <img class="bannerrr" src="{{ asset('/') }}assets/images/bannerAll.png" alt="bannerBrand">
+                <a href="#categories">
+                    <button class="btn-hiring-section3mz4">
+                        <span>CHECK</span>
+                        All Category
+                        <img
+                            class="img2"
+                            src="https://images-builder.vercel.app/img/arrow-left_section3mz4.svg"
+                            alt="arrow-left"
+                        />
+                    </button>
+                </a>
+                <!-- <div class="section3-left-section3mz4">
+                    <h1 class="section3-title-section3mz4">
+                        Creator of today's great and
+                        <span id="text-animation"></span> products
+                    </h1>
+                    <p class="section3-body-section3mz4">
+                        Herox helps businesses in Africa get paid by anyone,
+                        anywhere in the world securedly.
+                    </p>
+                </div> -->
+                <!-- <div class="section3-right-section3mz4">
+                    <div class="image-section3-section3mz4">
+                        <img src="{{ asset('/') }}assets/images/kamera.jpeg" alt="image" />
+                    </div>
+                </div> -->
+            </div>
+
+            <!-- <div class="container-section4-section4mz4">
                 <h1 class="section4-title-section4mz4">
                     All the best from {{ $brand->name ?? 'Categories' }}
                 </h1>
@@ -127,7 +157,7 @@
                         Exploration
                     </button>
                 </a>
-            </div>
+            </div> -->
 
             <div class="container-exp" id="categories">
                 <div class="top-exp">
