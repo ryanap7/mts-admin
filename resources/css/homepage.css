@@ -1322,18 +1322,20 @@ html {
 
 .child-form input {
   border: none;
-  width: 50vw;
+  width: 55vw;
   margin-top: 10px;
   border-radius: 6px;
   height: 50px;
   outline: none;
   padding: 0 14px;
+  font-size: 18px;
   background-color: rgb(241, 241, 241);
 }
 
 .child-form textarea {
   border: none;
   width: 50vw;
+  font-size: 18px;
   margin-top: 10px;
   border-radius: 6px;
   height: 140px;
@@ -1613,8 +1615,8 @@ html {
 }
 
 .wrapper-form h2 {
-  margin-bottom: 20px;
-  font-size: 36px;
+  margin-bottom: 30px;
+  font-size: 40px;
 }
 
 @media screen and (max-width: 750px) {
