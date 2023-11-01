@@ -371,7 +371,7 @@
             </p>
             <div class="container-card-mz1">
                 <div class="card-section5-left-mz1">
-                    <img loading="lazy" src="{{ asset('/') }}assets/images/mockup1.jpg" alt="portfolio">
+                    <img loading="lazy" src="{{ asset('/') }}assets/images/leftport.jpg" alt="portfolio">
                     <div class="skeleton-image">Loading...</div>
                     <div class="card-body-mz1">
                         <div>
@@ -386,7 +386,7 @@
                                 <h1>Title Porto</h1>
                             </div>
                         </div>
-                        <img loading="lazy" src="{{ asset('/') }}assets/images/mockup2.jpg" alt="portfolio">
+                        <img loading="lazy" src="{{ asset('/') }}assets/images/rightport1.jpg" alt="portfolio">
                         <div class="skeleton-image">Loading...</div>
                     </div>
                     <div class="card-sections3-mz1">
@@ -395,7 +395,7 @@
                                 <h1>Title Porto</h1>
                             </div>
                         </div>
-                        <img loading="lazy" src="{{ asset('/') }}assets/images/mockup3.jpg" alt="portfolio">
+                        <img loading="lazy" src="{{ asset('/') }}assets/images/rightport2.jpg" alt="portfolio">
                         <div class="skeleton-image">Loading...</div>
                     </div>
                 </div>
