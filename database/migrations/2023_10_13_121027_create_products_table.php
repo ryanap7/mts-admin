@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->foreignIdFor(Brand::class);
             $table->foreignIdFor(Category::class);
+            $table->string('slug')->unique();
             $table->string('name');
             $table->text('explanation')->nullable();
             $table->text('description');

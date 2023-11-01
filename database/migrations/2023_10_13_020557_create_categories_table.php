@@ -15,6 +15,7 @@ return new class extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(Brand::class);
+            $table->string('slug')->unique();
             $table->string('name');
             $table->string('image')->nullable();
             $table->text('description')->nullable();
