@@ -292,7 +292,7 @@
                     <a href="#HOME">HOME</a>
                 </li>
                 <li id="about2">
-                    <a href="#ABOUT">ABOUTs US</a>
+                    <a href="#ABOUT">ABOUT US</a>
                 </li>
                 <li><a href="#PORTFOLIO">PORTFOLIOS</a></li>
                 <li>
@@ -373,28 +373,13 @@
                 <div class="card-section5-left-mz1">
                     <img loading="lazy" src="{{ asset('/') }}assets/images/leftport.jpg" alt="portfolio">
                     <div class="skeleton-image">Loading...</div>
-                    <div class="card-body-mz1">
-                        <div>
-                            <h1>Title Porto</h1>
-                        </div>
-                    </div>
                 </div>
                 <div class="card-section-right-mz1">
                     <div class="card-sections2-mz1">
-                        <div class="card-body2-mz1">
-                            <div>
-                                <h1>Title Porto</h1>
-                            </div>
-                        </div>
                         <img loading="lazy" src="{{ asset('/') }}assets/images/rightport1.jpg" alt="portfolio">
                         <div class="skeleton-image">Loading...</div>
                     </div>
                     <div class="card-sections3-mz1">
-                        <div class="card-body3-mz1">
-                            <div>
-                                <h1>Title Porto</h1>
-                            </div>
-                        </div>
                         <img loading="lazy" src="{{ asset('/') }}assets/images/rightport2.jpg" alt="portfolio">
                         <div class="skeleton-image">Loading...</div>
                     </div>
