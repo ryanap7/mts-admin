@@ -1198,7 +1198,7 @@ html {
 .section4-mz2-title {
   font-style: normal;
   font-weight: 600;
-  font-size: 36px;
+  font-size: 40px;
   line-height: 44px;
   color: #141c24;
   text-align: center;
@@ -1238,7 +1238,7 @@ html {
 .accordion-mz2 span {
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 24px;
   line-height: 28px;
   color: #141c24;
 }
@@ -1851,15 +1851,16 @@ section4-btn-section4mz4:hover {
   width: 85%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 140px;
+  margin-top: 100px;
   margin-bottom: 100px;
 }
 
 .section4-mz2-title {
   font-style: normal;
   font-weight: 600;
-  font-size: 36px;
+  font-size: 40px;
   line-height: 44px;
+  margin-bottom: 20px;
   color: #141c24;
   text-align: center;
 }
@@ -1872,6 +1873,7 @@ section4-btn-section4mz4:hover {
   text-align: center;
   color: #344051;
   margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .accordion-mz2 {
@@ -1888,7 +1890,7 @@ section4-btn-section4mz4:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 20px;
+  margin: 30px 0px;
 }
 
 .accordion-mz2:first-of-type {
@@ -1898,7 +1900,7 @@ section4-btn-section4mz4:hover {
 .accordion-mz2 span {
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 22px;
   line-height: 28px;
   color: #141c24;
 }
@@ -1910,6 +1912,7 @@ section4-btn-section4mz4:hover {
 
 .panel-mz2 {
   padding: 20px 18px;
+  font-size: 20px;
   display: none;
   background-color: white;
   overflow: hidden;
