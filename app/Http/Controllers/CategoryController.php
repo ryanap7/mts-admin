@@ -16,7 +16,7 @@ class CategoryController extends Controller
     {
         $contact = Contact::first();
         $brands = Brand::whereStatus(true)->get();
-        $categories = Category::whereBelongsTo($brands)->get();
+        $categories = Category::whereBelongsTo($brands)->orderBy('name', 'asc')->get();
         return view('clients.category', compact('contact', 'categories'));
     }
 

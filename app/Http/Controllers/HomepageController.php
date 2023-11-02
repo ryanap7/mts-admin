@@ -14,7 +14,7 @@ class HomepageController extends Controller
      */
     public function __invoke()
     {
-        $products = Product::whereStatus(true)->orderBy('id', 'desc')->get();
+        $products = Product::whereStatus(true)->get();
         $contact = Contact::first();
         $bestSeller = Product::whereStatus(true)->inRandomOrder()->get();
         $statistics = Statistic::all();
