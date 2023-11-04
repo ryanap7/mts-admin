@@ -415,31 +415,45 @@
             <p class="teks-mou">
                 We have built and developed many products professionally
             </p>
-            <div class="wrap-foto-mou">
-
-                {{-- Products --}}
-                @if ($products->count() != 0)
-                @foreach ($products as $product)
-                <a href="{{ route('products.show', $product) }}">
-                    <div class="foto-mou">
-                        <!-- <img loading="lazy" src="{{ asset('/storage/' . $product->image) }}" alt="image" /> -->
-                        <img loading="lazy" src="{{ asset('/storage/' . $product->image) }}" alt="image" />
+            <div class="container-exp">
+                <div class="top-exp">
+                    <div class="top-left-exp">
+                        <a href="{{ route('brands') }}">
+                            <button class="btn-form">Show More</button>
+                        </a>
                     </div>
-                </a>
-                @endforeach
-                @else
-                <div class="wrapper-not-product">
-                    <p style="margin: auto;display: flex;align-items: center;justify-content: center;">
-                        <img src="{{ asset('/') }}assets/icons/prod.png" style="margin-right: 20px;width: 60px;height: 60px;" alt="icon product">
-                        product is not available...
-                    </p>
+                    <div class="top-right-exp">
+                        <div class="arrow-exp left-exp">
+                            <img loading="lazy" src="https://images-builder.vercel.app/img/leftexplore.svg" alt="icon-arrow">
+                        </div>
+                        <div class="arrow-exp right-exp">
+                            <img loading="lazy" src="https://images-builder.vercel.app/img/rightexplore.svg" alt="icon-arrow">
+                        </div>
+                    </div>
                 </div>
-                @endif
-                
+                <div class="bottom-exp">
+                    <div class="wrap-bottom-exp">
+                        {{-- Products --}}
+                        @if ($products->count() != 0)
+                        @foreach ($products as $product)
+                        <a href="{{ route('products.show', $product) }}">
+                            <div class="foto-mou">
+                                <!-- <img loading="lazy" src="{{ asset('/storage/' . $product->image) }}" alt="image" /> -->
+                                <img loading="lazy" src="{{ asset('/storage/' . $product->image) }}" alt="image" />
+                            </div>
+                        </a>
+                        @endforeach
+                        @else
+                        <div class="wrapper-not-product">
+                            <p style="margin: auto;display: flex;align-items: center;justify-content: center;">
+                                <img src="{{ asset('/') }}assets/icons/prod.png" style="margin-right: 20px;width: 60px;height: 60px;" alt="icon product">
+                                product is not available...
+                            </p>
+                        </div>
+                        @endif
+                    </div>
+                </div>
             </div>
-            <a href="{{ route('brands') }}">
-                <button class="btn-form">Show More</button>
-            </a>
         </div>
 
         <div class="container-exp">

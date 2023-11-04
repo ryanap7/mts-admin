@@ -110,7 +110,7 @@
             </div>
 
             <div class="conatiner-section3-section3mz4">
-                <img class="bannerrr" src="{{ asset('/') }}assets/images/bannerAll.png" alt="bannerBrand">
+                <img class="bannerrr" src="{{ asset('/') }}assets/images/allBrand.png" alt="bannerBrand">
                 <a href="#brands">
                     <button class="btn-hiring-section3mz4">
                         <span>CHECK</span>
