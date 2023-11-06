@@ -463,15 +463,15 @@
                     <h2 class="title-exp">BEST SELLERS</h2>
                 </div>
                 <div class="top-right-exp">
-                    <div class="arrow-exp left-exp">
+                    <div class="arrow-exp left-exp2">
                         <img loading="lazy" src="https://images-builder.vercel.app/img/leftexplore.svg" alt="icon-arrow">
                     </div>
-                    <div class="arrow-exp right-exp">
+                    <div class="arrow-exp right-exp2">
                         <img loading="lazy" src="https://images-builder.vercel.app/img/rightexplore.svg" alt="icon-arrow">
                     </div>
                 </div>
             </div>
-            <div class="bottom-exp">
+            <div class="bottom-exp2">
                 <div class="wrap-bottom-exp">
 
                     {{-- Best Seller --}}
@@ -680,6 +680,27 @@
         </a>
 
         <script>
+            const menuContainer = document.querySelector(".bottom-exp");
+            const menuContainer2 = document.querySelector(".bottom-exp2");
+            const leftButton = document.querySelector(".arrow-exp.left-exp");
+            const leftButton2 = document.querySelector(".arrow-exp.left-exp2");
+            const rightButton = document.querySelector(".arrow-exp.right-exp");
+            const rightButton2 = document.querySelector(".arrow-exp.right-exp2");
+            rightButton.addEventListener("click", () => {
+                menuContainer.scrollLeft += 200;
+            });
+            leftButton.addEventListener("click", () => {
+                menuContainer.scrollLeft -= 200;
+            });
+            rightButton2.addEventListener("click", () => {
+                menuContainer2.scrollLeft += 200;
+            });
+            leftButton2.addEventListener("click", () => {
+                menuContainer2.scrollLeft -= 200;
+            });
+        </script>
+
+        <script>
             const btnMessage = document.getElementById('btn-close2');
             const messageSuccess = document.getElementById('message-success');
             btnMessage.addEventListener('click', () => {
@@ -786,18 +807,6 @@
             window.addEventListener("DOMContentLoaded", () => {
                 // Mulai animasi pergantian teks ketika DOM telah dimuat
                 animateText();
-            });
-        </script>
-
-        <script>
-            const menuContainer = document.querySelector(".bottom-exp");
-            const leftButton = document.querySelector(".arrow-exp.left-exp");
-            const rightButton = document.querySelector(".arrow-exp.right-exp");
-            rightButton.addEventListener("click", () => {
-                menuContainer.scrollLeft += 200;
-            });
-            leftButton.addEventListener("click", () => {
-                menuContainer.scrollLeft -= 200;
             });
         </script>
 
