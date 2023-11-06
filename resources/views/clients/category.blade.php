@@ -176,7 +176,127 @@
                             <a href="{{ route('products.category', $category) }}">
                                 <div class="card-top-exp">
                                     @if ($category->image != null) 
-                                        <img src="{{ asset('/storage/' . $category->image) }}"
+                                        <img src="{{ asset('/') }}assets/images/kategory.jpg"
+                                        alt="card-image"/>
+                                    @else
+                                    <img
+                                        src="{{ asset('/') }}assets/images/kategory.jpg"
+                                        alt="card-image"
+                                    />  
+                                    @endif
+                                </div>
+                                <div class="card-bottom-exp">
+                                    <div class="title-bottom-exp">
+                                        <h4>{{ $category->name }}</h4>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card-exp">
+                            <a href="{{ route('products.category', $category) }}">
+                                <div class="card-top-exp">
+                                    @if ($category->image != null) 
+                                        <img src="{{ asset('/') }}assets/images/kategory.jpg"
+                                        alt="card-image"/>
+                                    @else
+                                    <img
+                                        src="{{ asset('/') }}assets/images/kategory.jpg"
+                                        alt="card-image"
+                                    />  
+                                    @endif
+                                </div>
+                                <div class="card-bottom-exp">
+                                    <div class="title-bottom-exp">
+                                        <h4>{{ $category->name }}</h4>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card-exp">
+                            <a href="{{ route('products.category', $category) }}">
+                                <div class="card-top-exp">
+                                    @if ($category->image != null) 
+                                        <img src="{{ asset('/') }}assets/images/kategory.jpg"
+                                        alt="card-image"/>
+                                    @else
+                                    <img
+                                        src="{{ asset('/') }}assets/images/kategory.jpg"
+                                        alt="card-image"
+                                    />  
+                                    @endif
+                                </div>
+                                <div class="card-bottom-exp">
+                                    <div class="title-bottom-exp">
+                                        <h4>{{ $category->name }}</h4>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card-exp">
+                            <a href="{{ route('products.category', $category) }}">
+                                <div class="card-top-exp">
+                                    @if ($category->image != null) 
+                                        <img src="{{ asset('/') }}assets/images/kategory.jpg"
+                                        alt="card-image"/>
+                                    @else
+                                    <img
+                                        src="{{ asset('/') }}assets/images/kategory.jpg"
+                                        alt="card-image"
+                                    />  
+                                    @endif
+                                </div>
+                                <div class="card-bottom-exp">
+                                    <div class="title-bottom-exp">
+                                        <h4>{{ $category->name }}</h4>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card-exp">
+                            <a href="{{ route('products.category', $category) }}">
+                                <div class="card-top-exp">
+                                    @if ($category->image != null) 
+                                        <img src="{{ asset('/') }}assets/images/kategory.jpg"
+                                        alt="card-image"/>
+                                    @else
+                                    <img
+                                        src="{{ asset('/') }}assets/images/kategory.jpg"
+                                        alt="card-image"
+                                    />  
+                                    @endif
+                                </div>
+                                <div class="card-bottom-exp">
+                                    <div class="title-bottom-exp">
+                                        <h4>{{ $category->name }}</h4>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card-exp">
+                            <a href="{{ route('products.category', $category) }}">
+                                <div class="card-top-exp">
+                                    @if ($category->image != null) 
+                                        <img src="{{ asset('/') }}assets/images/kategory.jpg"
+                                        alt="card-image"/>
+                                    @else
+                                    <img
+                                        src="{{ asset('/') }}assets/images/kategory.jpg"
+                                        alt="card-image"
+                                    />  
+                                    @endif
+                                </div>
+                                <div class="card-bottom-exp">
+                                    <div class="title-bottom-exp">
+                                        <h4>{{ $category->name }}</h4>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card-exp">
+                            <a href="{{ route('products.category', $category) }}">
+                                <div class="card-top-exp">
+                                    @if ($category->image != null) 
+                                        <img src="{{ asset('/') }}assets/images/kategory.jpg"
                                         alt="card-image"/>
                                     @else
                                     <img
