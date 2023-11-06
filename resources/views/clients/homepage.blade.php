@@ -512,11 +512,19 @@
                     <img class="ourCus" id="diskominfo" src="{{ asset('/') }}assets/images/Our Cus Kominfo Boyolali.png" alt="sponsor" />
                     <img class="ourCus" id="trisakti" src="{{ asset('/') }}assets/images/Our Cus Trisakti.png" alt="sponsor" />
                     <img class="ourCus" id="mensa" src="{{ asset('/') }}assets/images/Our Cus Mensa.png" alt="sponsor" />
+                    <img class="ourCus" id="mensa" src="{{ asset('/') }}assets/images/Our Cus Rentokil initial.png" alt="sponsor" />
                     <img class="ourCus" id="landison" src="{{ asset('/') }}assets/images/Our Cus Landson.png" alt="sponsor" />
+                    <img class="ourCus" id="landison" src="{{ asset('/') }}assets/images/Our Cus jakarta Setiabudi Indonesia.png" alt="sponsor" />
+                    <img class="ourCus" id="landison" src="{{ asset('/') }}assets/images/Our Cus Sadhana ekapraya amitra.png" alt="sponsor" />
                     <img class="ourCus" id="otto" src="{{ asset('/') }}assets/images/Our Cus Otto.png" alt="sponsor" />
+                    <img class="ourCus" id="otto" src="{{ asset('/') }}assets/images/Our Cus Petrochina.png" alt="sponsor" />
+                    <img class="ourCus" id="otto" src="{{ asset('/') }}assets/images/Our Cus Surveyor Indonesia.png" alt="sponsor" />
+                    <img class="ourCus" id="otto" src="{{ asset('/') }}assets/images/Our Cus Erajaya.png" alt="sponsor" />
                     <img class="ourCus" id="andini" src="{{ asset('/') }}assets/images/Our Cus Andini.png" alt="sponsor" />
+                    <img class="ourCus" id="andini" src="{{ asset('/') }}assets/images/Our Cus BRI finance.png" alt="sponsor" />
                     <img class="ourCus" id="akr" src="{{ asset('/') }}assets/images/Our Cus AKR.png" alt="sponsor" />
                     <img class="ourCus" id="indocapital" src="{{ asset('/') }}assets/images/Our Cus Indo Capital.png" alt="sponsor" />
+                    <img class="ourCus" id="indocapital" src="{{ asset('/') }}assets/images/Our Cus Cap Lang.png" alt="sponsor" />
                     <img class="ourCus" id="succor" src="{{ asset('/') }}assets/images/Our Cus Sukor.png" alt="sponsor" />
                     <img class="ourCus" id="planetBan" src="{{ asset('/') }}assets/images/Our Cus Planetban.png" alt="sponsor" />
                     <img class="ourCus" id="smr" src="{{ asset('/') }}assets/images/Our Cus SMR.png" alt="sponsor" />
@@ -525,11 +533,19 @@
                     <img class="ourCus" id="diskominfo" src="{{ asset('/') }}assets/images/Our Cus Kominfo Boyolali.png" alt="sponsor" />
                     <img class="ourCus" id="trisakti" src="{{ asset('/') }}assets/images/Our Cus Trisakti.png" alt="sponsor" />
                     <img class="ourCus" id="mensa" src="{{ asset('/') }}assets/images/Our Cus Mensa.png" alt="sponsor" />
+                    <img class="ourCus" id="otto" src="{{ asset('/') }}assets/images/Our Cus Erajaya.png" alt="sponsor" />
+                    <img class="ourCus" id="landison" src="{{ asset('/') }}assets/images/Our Cus jakarta Setiabudi Indonesia.png" alt="sponsor" />
+                    <img class="ourCus" id="landison" src="{{ asset('/') }}assets/images/Our Cus Sadhana ekapraya amitra.png" alt="sponsor" />
+                    <img class="ourCus" id="otto" src="{{ asset('/') }}assets/images/Our Cus Petrochina.png" alt="sponsor" />
                     <img class="ourCus" id="landison" src="{{ asset('/') }}assets/images/Our Cus Landson.png" alt="sponsor" />
                     <img class="ourCus" id="otto" src="{{ asset('/') }}assets/images/Our Cus Otto.png" alt="sponsor" />
+                    <img class="ourCus" id="mensa" src="{{ asset('/') }}assets/images/Our Cus Rentokil initial.png" alt="sponsor" />
                     <img class="ourCus" id="andini" src="{{ asset('/') }}assets/images/Our Cus Andini.png" alt="sponsor" />
                     <img class="ourCus" id="akr" src="{{ asset('/') }}assets/images/Our Cus AKR.png" alt="sponsor" />
                     <img class="ourCus" id="indocapital" src="{{ asset('/') }}assets/images/Our Cus Indo Capital.png" alt="sponsor" />
+                    <img class="ourCus" id="indocapital" src="{{ asset('/') }}assets/images/Our Cus Cap Lang.png" alt="sponsor" />
+                    <img class="ourCus" id="andini" src="{{ asset('/') }}assets/images/Our Cus BRI finance.png" alt="sponsor" />
+                    <img class="ourCus" id="otto" src="{{ asset('/') }}assets/images/Our Cus Surveyor Indonesia.png" alt="sponsor" />
                     <img class="ourCus" id="ubm" src="{{ asset('/') }}assets/images/Our Cus UBM.png" alt="sponsor" />
                     <img class="ourCus" id="cas" src="{{ asset('/') }}assets/images/Our Cus CAS.png" alt="sponsor" />
                     <img class="ourCus" id="succor" src="{{ asset('/') }}assets/images/Our Cus Sukor.png" alt="sponsor" />
