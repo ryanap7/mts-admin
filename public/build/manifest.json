@@ -1,7 +1,7 @@
 {
-  "resources/css/brandCategory.css": {
-    "file": "assets/brandCategory.f5c94db3.css",
-    "src": "resources/css/brandCategory.css",
+  "resources/css/homepage.css": {
+    "file": "assets/homepage.a91f10b8.css",
+    "src": "resources/css/homepage.css",
     "isEntry": true
   },
   "resources/css/navbar.css": {
@@ -9,19 +9,19 @@
     "src": "resources/css/navbar.css",
     "isEntry": true
   },
-  "resources/css/product.css": {
-    "file": "assets/product.0f474e3a.css",
-    "src": "resources/css/product.css",
-    "isEntry": true
-  },
   "resources/css/footer.css": {
     "file": "assets/footer.620b3102.css",
     "src": "resources/css/footer.css",
     "isEntry": true
   },
-  "resources/css/homepage.css": {
-    "file": "assets/homepage.57882206.css",
-    "src": "resources/css/homepage.css",
+  "resources/css/brandCategory.css": {
+    "file": "assets/brandCategory.f5c94db3.css",
+    "src": "resources/css/brandCategory.css",
+    "isEntry": true
+  },
+  "resources/css/product.css": {
+    "file": "assets/product.f3242749.css",
+    "src": "resources/css/product.css",
     "isEntry": true
   },
   "resources/css/filament.css": {
