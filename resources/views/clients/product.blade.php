@@ -104,7 +104,7 @@
                     @foreach ($products as $product)
                     <div class="child-product">
                         <div class="child-product-left">
-                            <img loading="lazy" src="{{ asset('/') }}assets/images/produk.jpg" alt="image-product">
+                            <img loading="lazy" src="{{ asset('/storage/' . $product->image ) }}" alt="image-product">
                         </div>
                         <div class="child-product-right">
                             <h4>{{ $product->name }}</h3>
