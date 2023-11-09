@@ -45,6 +45,7 @@ class CatalogResource extends Resource
                     ->acceptedFileTypes(['application/pdf', 'application/vnd.ms-excel', 'text/csv'])
                     ->required()
                     ->hint('pastikan file berbentuk pdf dan excel')
+                    ->maxSize(20480)
             ])->columns(1);
     }
 
